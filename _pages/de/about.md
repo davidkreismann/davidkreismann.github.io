@@ -27,4 +27,4 @@ Neuigkeiten
 * **Dez. 2025** – Vorstellung unserer Arbeit zu urbanen Hitzeinseln auf dem **NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning**.
 * **Okt. 2025** – Beginn meines Masterstudiums an der TUM und Aufnahme in die **Studienförderung der Stiftung der Deutschen Wirtschaft (sdw)**.
 
-Mehr findest du in meinen [Publikationen](/publications/) und meinem [Lebenslauf](/de/cv/).
+Mehr findest du in meinen [Publikationen](/de/publications/) und meinem [Lebenslauf](/de/cv/).

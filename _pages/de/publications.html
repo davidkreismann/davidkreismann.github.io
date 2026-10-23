@@ -1,0 +1,39 @@
+---
+layout: archive
+title: "Publikationen"
+permalink: /de/publications/
+author_profile: true
+lang: de
+translation: /publications/
+description: "Publikationen und Patente von David Kreismann, unter anderem auf der SIGMOD 2026 und dem NeurIPS 2025 Workshop Tackling Climate Change with Machine Learning."
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">Alle Artikel findest du auch in meinem <a href="{{site.author.googlescholar}}">Google-Scholar-Profil</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+<!-- New style rendering if publication categories are defined -->
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title_de | default: category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
+
+
+

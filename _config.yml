@@ -92,10 +92,13 @@ author_de:
 publication_category:
   conferences:
     title: 'Conference Papers'
+    title_de: 'Konferenzbeiträge'
   workshops:
     title: 'Workshop Papers'
+    title_de: 'Workshop-Beiträge'
   patents:
     title: 'Patents'
+    title_de: 'Patente'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

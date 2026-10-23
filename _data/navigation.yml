@@ -17,13 +17,13 @@ main:
   - title: "Blog"
     url: /blog/
 
-# German header, used on pages with `lang: de`. Publications stay in English.
+# German header, used on pages with `lang: de`.
 main_de:
   - title: "Lebenslauf"
     url: /de/cv/
 
   - title: "Publikationen"
-    url: /publications/
+    url: /de/publications/
 
   - title: "Projekte"
     url: /de/projects/

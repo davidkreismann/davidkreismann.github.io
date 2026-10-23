@@ -13,6 +13,6 @@ tags:
 
 Hallo zusammen, ich habe es endlich geschafft, meine eigene Website aufzusetzen!
 
-Ich nutze sie vor allem als Ort, an dem man erfährt, wer ich bin und woran ich arbeite: mein [Lebenslauf](/de/cv/), meine [Publikationen](/publications/) und einige meiner [Projekte](/de/projects/). Hin und wieder schreibe ich hier vielleicht auch einen Blogbeitrag, zum Beispiel über meine Forschung, Projekte, die ich gebaut habe, oder Dinge, die ich unterwegs gelernt habe.
+Ich nutze sie vor allem als Ort, an dem man erfährt, wer ich bin und woran ich arbeite: mein [Lebenslauf](/de/cv/), meine [Publikationen](/de/publications/) und einige meiner [Projekte](/de/projects/). Hin und wieder schreibe ich hier vielleicht auch einen Blogbeitrag, zum Beispiel über meine Forschung, Projekte, die ich gebaut habe, oder Dinge, die ich unterwegs gelernt habe.
 
 Danke fürs Vorbeischauen!
