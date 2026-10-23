@@ -1,0 +1,32 @@
+# The following is the order of the links in the header of the website.
+#
+# Changing the order here will adjust the order and you can also add additional
+# links. Removing a link prevents it from showing in the header, but does not
+# prevent it from being included in the site.
+
+main:
+  - title: "CV"
+    url: /cv/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Blog"
+    url: /blog/
+
+# German header, used on pages with `lang: de`. Publications stay in English.
+main_de:
+  - title: "Lebenslauf"
+    url: /de/cv/
+
+  - title: "Publikationen"
+    url: /publications/
+
+  - title: "Projekte"
+    url: /de/projects/
+
+  - title: "Blog"
+    url: /de/blog/

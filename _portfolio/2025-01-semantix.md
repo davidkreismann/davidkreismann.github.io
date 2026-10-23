@@ -1,0 +1,15 @@
+---
+title: "Semantix"
+excerpt: "A word guessing game where every guess is scored by how close its meaning is to the secret word, using text embeddings and vector search. In German and English."
+excerpt_de: "Ein Worträtsel, bei dem jeder Tipp danach bewertet wird, wie nah seine Bedeutung am gesuchten Wort ist, mit Text-Embeddings und Vektorsuche. Auf Deutsch und Englisch."
+collection: portfolio
+year: 2025
+stack: ["TypeScript", "Next.js", "Python", "Pinecone"]
+github: "https://github.com/xdavld/Semantix"
+---
+
+Semantix is a browser game about the meaning of words. Players try to find a secret target word, and after every guess the game shows how semantically close the guess is, so you work your way towards the answer by meaning rather than by spelling.
+
+**Stack:** TypeScript, Next.js, Python, PyTorch and Hugging Face Transformers, spaCy, Pinecone, Vercel
+
+[Code on GitHub](https://github.com/xdavld/Semantix)

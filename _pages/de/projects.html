@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Projekte"
+permalink: /de/projects/
+author_profile: true
+description: "Softwareprojekte von David Kreismann, darunter ein MCP-Proxy für CHECK24, das Worträtsel Semantix und ein Instagram-Uploader."
+lang: de
+translation: /projects/
+---
+
+{% include base_path %}
+
+{% for post in site.portfolio reversed %}
+<div class="project-card">
+  <div class="cv-entry__head">
+    <a class="project-card__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    <span class="cv-entry__date">{{ post.year }}</span>
+  </div>
+  <p class="project-card__text">{{ post.excerpt_de | default: post.excerpt | strip_html }}</p>
+  <div class="project-card__footer">
+    <span class="project-card__stack">{{ post.stack | join: " · " }}</span>
+    {% if post.github %}<a class="project-card__link" href="{{ post.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+  </div>
+</div>
+{% endfor %}

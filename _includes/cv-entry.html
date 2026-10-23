@@ -1,0 +1,32 @@
+{% assign e = include.entry %}
+<div class="cv-entry">
+  <div class="cv-entry__head">
+    <span class="cv-entry__title">{{ e.title }}</span>
+    <span class="cv-entry__date">{{ e.date }}</span>
+  </div>
+  {% if e.org or e.location %}
+  <div class="cv-entry__sub">
+    <span class="cv-entry__org">{{ e.org }}</span>
+    {% if e.location %}<span class="cv-entry__location">{{ e.location }}</span>{% endif %}
+  </div>
+  {% endif %}
+  {% if e.details %}
+  <ul class="cv-entry__details">
+    {% for d in e.details %}<li>{{ d }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+  {% if e.roles %}
+  <div class="cv-entry__roles">
+    {% for r in e.roles %}
+    <div class="cv-role">
+      <div class="cv-entry__head">
+        <span class="cv-role__title">{{ r.title }}</span>
+        <span class="cv-entry__date">{{ r.date }}</span>
+      </div>
+      {% if r.location %}<div class="cv-entry__sub"><span></span><span class="cv-entry__location">{{ r.location }}</span></div>{% endif %}
+      <ul class="cv-entry__details"><li>{{ r.text }}</li></ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,164 @@
+/* ==========================================================================
+   CV page (_pages/cv.md, _includes/cv-entry.html)
+   ========================================================================== */
+
+/* shared spacing for CV and project lists */
+$section-gap : 2.5em;
+$entry-gap   : 1.5em;
+$role-gap    : 1em;
+
+.cv-section {
+  margin-bottom: $section-gap;
+
+  h2 {
+    margin-bottom: 0.75em;
+  }
+}
+
+.cv-entry {
+  margin-bottom: $entry-gap;
+}
+
+.cv-entry__head,
+.cv-entry__sub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  column-gap: 1em;
+}
+
+.cv-entry__title {
+  font-weight: bold;
+}
+
+.cv-entry__date {
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+  white-space: nowrap;
+}
+
+.cv-entry__org {
+  font-style: italic;
+}
+
+.cv-entry__location {
+  margin-left: auto;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+  white-space: nowrap;
+}
+
+.cv-entry__details {
+  margin: 0.4em 0 0;
+  padding-left: 1.2em;
+
+  li {
+    margin-bottom: 0.2em;
+  }
+}
+
+.cv-entry__roles {
+  margin-top: 0.75em;
+  padding-left: 1em;
+  border-left: 2px solid var(--global-border-color);
+}
+
+.cv-role {
+  margin-bottom: $role-gap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cv-role__title {
+  font-weight: 600;
+}
+
+.cv-role__text {
+  margin: 0.25em 0 0;
+}
+
+.cv-entry__sub {
+  line-height: 1.4;
+}
+
+/* roles have no organization line: float the location so the description starts right below the title */
+.cv-role .cv-entry__sub {
+  float: right;
+  margin-left: 1em;
+}
+
+.cv-role .cv-entry__details {
+  margin-top: 0.1em;
+}
+
+/* on narrow screens the location gets its own line instead of floating next to the text */
+@media (max-width: 600px) {
+  .cv-role .cv-entry__sub {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.cv-role::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ==========================================================================
+   Projects page (_pages/projects.html)
+   ========================================================================== */
+
+.project-card {
+  margin-bottom: $entry-gap;
+}
+
+.project-card__title {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.project-card__text {
+  margin: 0.25em 0 0.4em;
+}
+
+.project-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.project-card__stack {
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+}
+
+.project-card__link {
+  font-size: $type-size-6;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* page and archive links are underlined by default; keep card and CV titles clean until hover */
+.page__content,
+.archive {
+  .project-card__title,
+  .project-card__link,
+  a.cv-entry__title {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
