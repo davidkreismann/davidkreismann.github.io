@@ -10,6 +10,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+{% assign months = "Jan.,Feb.,March,April,May,June,July,Aug.,Sept.,Oct.,Nov.,Dec." | split: "," %}
 
 
 <div class="cv-section">
@@ -28,7 +29,7 @@ redirect_from:
   <div class="cv-entry">
     <div class="cv-entry__head">
       <a class="cv-entry__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
-      <span class="cv-entry__date">{{ post.date | date: "%b. %Y" }}</span>
+      <span class="cv-entry__date">{% assign month = post.date | date: "%-m" | minus: 1 %}{{ months[month] }} {{ post.date | date: "%Y" }}</span>
     </div>
     <div class="cv-entry__org">{{ post.venue }}</div>
     <p class="cv-role__text">{{ post.citation | split: '. (' | first }}</p>
@@ -42,7 +43,7 @@ redirect_from:
   <div class="cv-entry">
     <div class="cv-entry__head">
       <a class="cv-entry__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
-      <span class="cv-entry__date">{{ post.date | date: "%b. %Y" }}</span>
+      <span class="cv-entry__date">{% assign month = post.date | date: "%-m" | minus: 1 %}{{ months[month] }} {{ post.date | date: "%Y" }}</span>
     </div>
     <div class="cv-entry__org">Filed with {{ post.venue }}</div>
     <p class="cv-role__text">{{ post.citation | split: '. (' | first }}</p>

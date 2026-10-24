@@ -9,6 +9,7 @@ translation: /cv/
 ---
 
 {% include base_path %}
+{% assign months_de = "Jan.,Feb.,März,Apr.,Mai,Juni,Juli,Aug.,Sept.,Okt.,Nov.,Dez." | split: "," %}
 
 
 <div class="cv-section">
@@ -27,7 +28,7 @@ translation: /cv/
   <div class="cv-entry">
     <div class="cv-entry__head">
       <a class="cv-entry__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
-      <span class="cv-entry__date">{{ post.date | date: "%m/%Y" }}</span>
+      <span class="cv-entry__date">{% assign month = post.date | date: "%-m" | minus: 1 %}{{ months_de[month] }} {{ post.date | date: "%Y" }}</span>
     </div>
     <div class="cv-entry__org">{{ post.venue }}</div>
     <p class="cv-role__text">{{ post.citation | split: '. (' | first }}</p>
@@ -41,7 +42,7 @@ translation: /cv/
   <div class="cv-entry">
     <div class="cv-entry__head">
       <a class="cv-entry__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
-      <span class="cv-entry__date">{{ post.date | date: "%m/%Y" }}</span>
+      <span class="cv-entry__date">{% assign month = post.date | date: "%-m" | minus: 1 %}{{ months_de[month] }} {{ post.date | date: "%Y" }}</span>
     </div>
     <div class="cv-entry__org">Angemeldet bei {{ post.venue }}</div>
     <p class="cv-role__text">{{ post.citation | split: '. (' | first }}</p>
