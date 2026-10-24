@@ -18,7 +18,7 @@ translation: /projects/
   </div>
   <p class="project-card__text">{{ post.excerpt_de | default: post.excerpt | strip_html }}</p>
   <div class="project-card__footer">
-    <span class="project-card__stack">{{ post.stack | join: " · " }}</span>
+    <span class="project-card__stack">{{ post.stack | join: ", " }}</span>
     {% if post.github %}<a class="project-card__link" href="{{ post.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
   </div>
 </div>

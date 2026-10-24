@@ -48,8 +48,6 @@ $role-gap    : 1em;
 }
 
 .cv-entry__date {
-  color: var(--global-text-color-light);
-  font-size: $type-size-6;
   white-space: nowrap;
 }
 
@@ -59,8 +57,6 @@ $role-gap    : 1em;
 
 .cv-entry__location {
   margin-left: auto;
-  color: var(--global-text-color-light);
-  font-size: $type-size-6;
   white-space: nowrap;
 }
 
@@ -88,7 +84,7 @@ $role-gap    : 1em;
 }
 
 .cv-role__title {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .cv-role__text {
@@ -96,7 +92,7 @@ $role-gap    : 1em;
 }
 
 .cv-entry__sub {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* roles have no organization line: float the location so the description starts right below the title */
