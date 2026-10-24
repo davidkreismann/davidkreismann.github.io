@@ -12,7 +12,7 @@ redirect_from:
 
 I am a Master's student in **Robotics, Cognition, Intelligence** at the [Technical University of Munich (TUM)](https://www.tum.de) and a working student at [IBM](https://www.ibm.com).
 
-Along the way I have worked on research projects at the [CV4DT Lab](https://cv4dt.github.io/) at the University of Cambridge. Before that I was at IBM Research in [Zurich](https://research.ibm.com/labs/zurich) and [Almaden](https://research.ibm.com/labs/silicon-valley) and at the [Karlsruhe Service Research Institute](https://www.ksri.kit.edu/).
+Along the way I have worked on research projects at the [CV4DT Lab](https://cv4dt.github.io/) at the University of Cambridge. Before that I was at IBM Research in [Zurich](https://research.ibm.com/labs/zurich) and [Almaden](https://research.ibm.com/labs/silicon-valley) and at the [Karlsruhe Service Research Institute](https://www.ksri.kit.edu/) at the Karlsruhe Institute of Technology (KIT).
 
 Research interests
 ======
