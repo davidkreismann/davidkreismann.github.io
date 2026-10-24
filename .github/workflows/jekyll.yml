@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
       - name: Setup Ruby, JRuby and TruffleRuby
-        uses: ruby/setup-ruby@v1.328.0
+        uses: ruby/setup-ruby@v1.332.0
         with:
           ruby-version: '3.3'
           bundler-cache: true
@@ -43,14 +43,14 @@ jobs:
           JEKYLL_ENV: production
       # The CV PDF is generated from _data/cv.yml via _pages/cv-pdf.tex
       - name: Compile CV PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: David_Kreismann_CV.tex
           working_directory: _site/files
       - name: Remove LaTeX sources and build files
         run: sudo find _site/files -name 'David_Kreismann_CV.*' ! -name '*.pdf' -delete
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Shrink icon fonts to the icons in use
