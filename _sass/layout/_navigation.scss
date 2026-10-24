@@ -204,7 +204,12 @@
 
   .visible-links {
     display: table;
-    padding-right: 115px; /* reserve space for the language and theme toggles pinned to the right */
+    /* the language and theme toggles are pinned to the right; .nav-switch-space keeps room for them.
+       It is an element rather than padding because the overflow menu script ignores padding */
+    .nav-switch-space {
+      width: 105px;
+      min-width: 105px;
+    }
 
     li {
       display: table-cell;

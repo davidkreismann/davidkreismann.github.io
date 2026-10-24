@@ -105,8 +105,23 @@ $role-gap    : 1em;
   margin-top: 0.1em;
 }
 
-/* on narrow screens the location gets its own line instead of floating next to the text */
+/* on narrow screens dates and places go below the title instead of squeezing it */
 @media (max-width: 600px) {
+  .cv-entry__head,
+  .cv-entry__sub {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-entry__location {
+    margin-left: 0;
+  }
+
+  .cv-entry__date,
+  .cv-entry__location {
+    color: var(--global-text-color-light);
+  }
+
   .cv-role .cv-entry__sub {
     float: none;
     margin-left: 0;
@@ -187,6 +202,60 @@ $role-gap    : 1em;
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+/* ==========================================================================
+   Small screens: header and sidebar
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  /* keep the site title on one line so the menu items move into the hamburger menu instead of overlapping the switches */
+  .greedy-nav .visible-links li:first-child {
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+
+  /* less empty space between the header and the profile box */
+  .sidebar {
+    padding-top: 0.5em;
+  }
+
+  /* show the profile links as a row of icons instead of the "Follow" dropdown */
+  .author__urls-wrapper {
+    display: block;
+    margin-top: 0.75em;
+
+    button {
+      display: none;
+    }
+  }
+
+  .author__urls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 1em;
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      margin: 0;
+      padding: 0.25em 0;
+      font-size: $type-size-6;
     }
   }
 }

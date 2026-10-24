@@ -25,6 +25,7 @@
             {% when 'posts' %}{% assign lang_fallback_en = '/blog/' %}{% assign lang_fallback_de = '/de/blog/' %}
             {% else %}{% assign lang_fallback_en = '/' %}{% assign lang_fallback_de = '/de/' %}
           {% endcase %}
+          <li class="masthead__menu-item persist tail nav-switch-space" aria-hidden="true"></li>
           <li id="lang-toggle" class="masthead__menu-item persist tail">
             {% if page.lang == 'de' %}
               <a href="{{ base_path }}{{ page.translation | default: lang_fallback_en }}" hreflang="en" title="Switch to English"><span class="lang-toggle__current">DE</span> / EN</a>

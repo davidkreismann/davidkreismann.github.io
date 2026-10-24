@@ -61,7 +61,8 @@ function updateNav() {
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
   $('body').css('padding-top', mastheadHeight + 'px');
-  if ($(".author__urls-wrapper button").is(":visible")) {
+  // the sidebar only sits below the fixed header on wide screens (the "Follow" button is hidden on small screens, see _cv.scss)
+  if (!window.matchMedia("(min-width: 1024px)").matches) {
     $(".sidebar").css("padding-top", "");
   } else {
     $(".sidebar").css("padding-top", mastheadHeight + "px");
