@@ -10,11 +10,16 @@ translation: /projects/
 
 {% include base_path %}
 
+{% assign written_year = "" %}
 {% for post in site.portfolio reversed %}
+{% assign year = post.year | append: "" %}
+{% if year != written_year %}
+<h2 id="{{ year }}" class="archive__subtitle">{{ year }}</h2>
+{% assign written_year = year %}
+{% endif %}
 <div class="project-card">
   <div class="cv-entry__head">
     <a class="project-card__title" href="{{ base_path }}{{ post.translation | default: post.url }}">{{ post.title }}</a>
-    <span class="cv-entry__date">{{ post.year }}</span>
   </div>
   <p class="project-card__text">{{ post.excerpt_de | default: post.excerpt | strip_html }}</p>
   <div class="project-card__footer">
