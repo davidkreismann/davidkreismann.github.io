@@ -28,21 +28,19 @@ function determineComputedTheme() {
 // Set the theme on page load or when explicitly called. Without an argument the
 // theme is the stored preference or, failing that, the OS/browser preference.
 function setTheme(theme) {
-  const use_theme = theme || determineComputedTheme();
-  $("#theme-toggle button").attr("aria-pressed", use_theme === "dark");
-
-  if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else if (use_theme === "light") {
-    $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-  }
+  const useTheme = theme || determineComputedTheme();
+  const dark = useTheme === "dark";
+  document.querySelector("#theme-toggle button").setAttribute("aria-pressed", dark);
+  const icon = document.querySelector("#theme-icon");
+  icon.classList.toggle("fa-moon", dark);
+  icon.classList.toggle("fa-sun", !dark);
+  if (dark) document.documentElement.setAttribute("data-theme", "dark");
+  else document.documentElement.removeAttribute("data-theme");
 }
 
 // Toggle the theme manually
 function toggleTheme() {
-  const current_theme = $("html").attr("data-theme");
+  const current_theme = document.documentElement.getAttribute("data-theme");
   const new_theme = current_theme === "dark" ? "light" : "dark";
   localStorage.setItem("theme", new_theme);
   setTheme(new_theme);
@@ -120,7 +118,7 @@ function redrawPlotly() {
     let jsonData = JSON.parse(elem.textContent);
 
     // Get the Plotly node
-    let chartElement = $(elem).parent().next().get(0);
+    let chartElement = elem.parentElement.nextElementSibling;
 
     // Set the theme for the plot and render it
     const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
@@ -137,34 +135,9 @@ function redrawPlotly() {
    Actions that should occur when the page has been fully loaded
    ========================================================================== */
 
-$(document).ready(function () {
-  // SCSS SETTINGS - These should be the same as the settings in the relevant files
-  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
-  const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
-
-  // If the user hasn't chosen a theme, follow the OS preference
-  setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
-
-  // Enable the theme toggle
-  $('#theme-toggle button').on('click', toggleTheme);
-
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
-
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
-    }
-  });
-
+// Module scripts run after the document has been parsed.
+setTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", event => {
+  if (!localStorage.getItem("theme")) setTheme(event.matches ? "dark" : "light");
 });
+document.querySelector('#theme-toggle button').addEventListener('click', toggleTheme);

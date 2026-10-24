@@ -12,5 +12,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+{% if site.author.avatar == 'profile.jpg' and page.author_profile %}
+<link rel="preload" as="image" href="{{ base_path }}/images/profile-224.webp"
+      imagesrcset="{{ base_path }}/images/profile-128.webp 128w, {{ base_path }}/images/profile-224.webp 224w, {{ base_path }}/images/profile-352.webp 352w"
+      imagesizes="(min-width: 925px) 175px, (min-width: 400px) 112px, 28vw" fetchpriority="high">
+{% endif %}
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">

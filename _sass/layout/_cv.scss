@@ -108,14 +108,41 @@ $role-gap    : 1em;
   line-height: 1.5;
 }
 
-/* roles have no organization line: float the location so the description starts right below the title */
-.cv-role .cv-entry__sub {
-  float: right;
-  margin-left: 1em;
-}
+/* Keep descriptions in the title column instead of wrapping beneath date/place. */
+@media (min-width: 601px) {
+  .cv-entry,
+  .cv-role {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    column-gap: 1.5em;
+    align-items: baseline;
 
-.cv-role .cv-entry__details {
-  margin-top: 0.1em;
+    > .cv-entry__head,
+    > .cv-entry__sub {
+      display: contents;
+    }
+
+    .cv-entry__title,
+    .cv-role__title,
+    .cv-entry__org,
+    .cv-entry__details { grid-column: 1; }
+    .cv-entry__title,
+    .cv-role__title,
+    .cv-entry__date { grid-row: 1; }
+    .cv-entry__date,
+    .cv-entry__location { grid-column: 2; justify-self: end; }
+    .cv-entry__org,
+    .cv-entry__location { grid-row: 2; }
+    .cv-entry__details { grid-row: 3; }
+    .cv-entry__roles { grid-column: 1 / -1; }
+  }
+
+  .cv-role .cv-entry__details {
+    grid-row: 2 / span 2;
+    margin-top: 0.1em;
+  }
+
+  .cv-entry__sub > span:empty { display: none; }
 }
 
 /* On narrow screens: title, institution, then smaller date and place; wrap when needed. */
@@ -282,9 +309,11 @@ $role-gap    : 1em;
 }
 
 @media (max-width: ($large - 1px)) {
-  /* less empty space between the header and the profile box */
+  #main { margin-top: 1em; }
+
   .sidebar {
-    padding-top: 0.5em;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   /* Fill the mobile content width without the template's table-cell padding. */

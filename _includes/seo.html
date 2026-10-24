@@ -157,8 +157,9 @@ Twitter username (site.twitter.username), matching upstream behavior.
 {% endif %}
 {% if seo_image_abs %}
   <meta property="og:image" content="{{ seo_image_abs }}">
-  {% if seo_image_abs contains "og-image.png" %}
+  {% if seo_image_abs contains "og-image" %}
     <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="David Kreismann, M.Sc. RCI @ TUM, Working Student @ IBM">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
   {% endif %}

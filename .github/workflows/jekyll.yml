@@ -53,7 +53,7 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Shrink icon fonts to the icons in use
+      - name: Optimize icon fonts, stylesheets and asset filenames
         run: |
           pip install fonttools brotli
           python .github/scripts/subset_icon_fonts.py _site
