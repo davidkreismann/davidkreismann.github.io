@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "M.Sc. RCI @ TUM<br>Working Student @ IBM"
   location         : "Munich, Germany"
-  employer         : "TU Munich"
+  employer         :
   uri              : # URL
   email            : "davidkreismann@gmx.de" 
 
@@ -86,7 +86,7 @@ author:
 author_de:
   bio              : "M.Sc. RCI @ TUM<br>Werkstudent @ IBM"
   location         : "München, Deutschland"
-  employer         : "TU München"
+  employer         :
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
