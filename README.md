@@ -45,41 +45,8 @@ Open [localhost:4000](http://localhost:4000). Restart Jekyll after changing `_co
 
 Jekyll generates the CV's LaTeX source, but does not compile its PDF. The PDF link will return 404 in a fresh local preview unless you compile or provide the PDF separately.
 
-## JavaScript changes
-
-The site loads the committed `assets/js/main.min.js` bundle. After editing the JavaScript sources, rebuild it and include the updated bundle in your commit:
-
-```bash
-npm install
-npm run build:js
-```
-
-SCSS changes are compiled by Jekyll. Production builds give CSS and JavaScript content-based filenames so unchanged files stay reusable across deployments; local previews use a build timestamp. The landing pages inline their base styles to avoid a render-blocking stylesheet request. The UI uses native browser APIs without jQuery.
-
-## Profile and share images
-
-The committed WebP profile variants and `images/og-image-v2.png` are generated from the real portrait, without retouching. With Pillow installed, regenerate them using:
-
-```bash
-python3 .github/scripts/build_profile_images.py
-```
-
-Pass an original photo as an argument to replace `images/profile.jpg` and regenerate all variants. The share card uses a white background and the same short bio as the sidebar.
-
 ## Deployment and analytics
 
 Pushing to `master` runs `.github/workflows/jekyll.yml`. The workflow builds the production site, compiles the CV PDF, removes the generated LaTeX sources, subsets icon fonts and stylesheets, fingerprints assets and checks internal links before publishing to GitHub Pages.
 
 GoatCounter is configured in `_config.yml` and loaded through `_includes/analytics-providers/custom.html` only when `JEKYLL_ENV=production`. Local development does not send visitor statistics.
-
-### Campaign links
-
-Use these inbound website links in the corresponding profile or document. GoatCounter creates each campaign when it receives the first visit; no dashboard setup is needed. External profiles and the PDF CV are not modified automatically.
-
-| Placement | Website link |
-| --- | --- |
-| LinkedIn | https://davidkreismann.github.io/?utm_campaign=linkedin&utm_source=linkedin |
-| ORCID | https://davidkreismann.github.io/?utm_campaign=orcid&utm_source=orcid |
-| GitHub | https://davidkreismann.github.io/?utm_campaign=github&utm_source=github |
-| CV | https://davidkreismann.github.io/?utm_campaign=cv&utm_source=cv |
-| Google Scholar | https://davidkreismann.github.io/?utm_campaign=google-scholar&utm_source=google-scholar |
