@@ -19,8 +19,22 @@ $role-gap    : 1em;
   margin-bottom: $section-gap;
 
   h2 {
-    margin-bottom: 0.75em;
+    margin-bottom: 0;
   }
+}
+
+/* section headings with a line (publications, CV): same spacing as the year headings on the blog,
+   9px from heading to line and about 11px from line to the first entry */
+.archive h2:has(+ hr) {
+  margin-bottom: 0;
+}
+
+.archive h2 + hr {
+  margin: 9px 0 11px;
+}
+
+.archive hr + .list__item .archive__item-title {
+  margin-top: 0;
 }
 
 .cv-entry {
