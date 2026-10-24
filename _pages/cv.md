@@ -12,19 +12,21 @@ redirect_from:
 {% include base_path %}
 {% assign months = "Jan.,Feb.,March,April,May,June,July,Aug.,Sept.,Oct.,Nov.,Dec." | split: "," %}
 
+<div class="wordwrap">You can also find my CV as a <a href="{{ base_path }}/files/David_Kreismann_CV.pdf">PDF</a>.</div>
+
 
 <div class="cv-section">
-  <h2>Education</h2>
+  <h2>Education</h2><hr />
   {% for entry in site.data.cv.education %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Experience</h2>
+  <h2>Experience</h2><hr />
   {% for entry in site.data.cv.experience %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Publications</h2>
+  <h2>Publications</h2><hr />
   {% for post in site.publications reversed %}{% if post.category != 'patents' %}
   <div class="cv-entry">
     <div class="cv-entry__head">
@@ -38,7 +40,7 @@ redirect_from:
 </div>
 
 <div class="cv-section">
-  <h2>Patents</h2>
+  <h2>Patents</h2><hr />
   {% for post in site.publications reversed %}{% if post.category == 'patents' %}
   <div class="cv-entry">
     <div class="cv-entry__head">
@@ -52,14 +54,11 @@ redirect_from:
 </div>
 
 <div class="cv-section">
-  <h2>Honours and Awards</h2>
+  <h2>Honours and Awards</h2><hr />
   {% for entry in site.data.cv.awards %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Extracurricular Activities</h2>
+  <h2>Extracurricular Activities</h2><hr />
   {% for entry in site.data.cv.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
-</div>
-<div class="project-meta cv-download">
-  <a class="project-card__link" href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Full CV (PDF)</a>
 </div>

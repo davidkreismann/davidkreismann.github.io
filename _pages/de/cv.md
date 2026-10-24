@@ -11,19 +11,21 @@ translation: /cv/
 {% include base_path %}
 {% assign months_de = "Jan.,Feb.,März,Apr.,Mai,Juni,Juli,Aug.,Sept.,Okt.,Nov.,Dez." | split: "," %}
 
+<div class="wordwrap">Meinen Lebenslauf gibt es auch als <a href="{{ base_path }}/files/David_Kreismann_CV.pdf">PDF</a> (auf Englisch).</div>
+
 
 <div class="cv-section">
-  <h2>Ausbildung</h2>
+  <h2>Ausbildung</h2><hr />
   {% for entry in site.data.cv_de.education %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Berufserfahrung</h2>
+  <h2>Berufserfahrung</h2><hr />
   {% for entry in site.data.cv_de.experience %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Publikationen</h2>
+  <h2>Publikationen</h2><hr />
   {% for post in site.publications reversed %}{% if post.category != 'patents' %}
   <div class="cv-entry">
     <div class="cv-entry__head">
@@ -37,7 +39,7 @@ translation: /cv/
 </div>
 
 <div class="cv-section">
-  <h2>Patente</h2>
+  <h2>Patente</h2><hr />
   {% for post in site.publications reversed %}{% if post.category == 'patents' %}
   <div class="cv-entry">
     <div class="cv-entry__head">
@@ -51,14 +53,11 @@ translation: /cv/
 </div>
 
 <div class="cv-section">
-  <h2>Auszeichnungen und Stipendien</h2>
+  <h2>Auszeichnungen und Stipendien</h2><hr />
   {% for entry in site.data.cv_de.awards %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
 
 <div class="cv-section">
-  <h2>Ehrenamtliches Engagement</h2>
+  <h2>Ehrenamtliches Engagement</h2><hr />
   {% for entry in site.data.cv_de.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
-</div>
-<div class="project-meta cv-download">
-  <a class="project-card__link" href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Vollständiger Lebenslauf (PDF, Englisch)</a>
 </div>
