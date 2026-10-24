@@ -208,8 +208,20 @@ $role-gap    : 1em;
    Projects page (_pages/projects.html)
    ========================================================================== */
 
-.project-card {
+.project-card,
+.publication-card {
   margin-bottom: $entry-gap;
+}
+
+/* Publication metadata follows the same compact rhythm as project/blog cards. */
+.publication-card {
+  .archive__item-title { margin: 0; }
+
+  .archive__item > p {
+    margin: 0.25em 0 0.4em;
+
+    &:last-child { margin-bottom: 0; }
+  }
 }
 
 /* Project years use the same heading scale and rule spacing as CV/publication sections. */
