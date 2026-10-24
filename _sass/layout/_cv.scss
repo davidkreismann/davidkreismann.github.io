@@ -331,7 +331,7 @@ $role-gap    : 1em;
   /* Fill the mobile content width without the template's table-cell padding. */
   .author-profile {
     display: grid;
-    grid-template-columns: clamp(88px, 28vw, 112px) minmax(0, 1fr);
+    grid-template-columns: 80px minmax(0, 1fr);
     align-items: center;
     column-gap: 16px;
     width: 100%;
@@ -361,19 +361,22 @@ $role-gap    : 1em;
   }
 
   .sidebar .author__name {
-    font-size: clamp(20px, 6vw, 24px);
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0 0 3px;
   }
 
   .sidebar .author__bio,
   .sidebar .author__content p {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.45;
   }
 
-  /* show the profile links as a row of icons instead of the "Follow" dropdown */
+  /* Use the full width for five equally spaced, labeled contact links. */
   .author__urls-wrapper {
     display: block;
     grid-column: 1 / -1;
-    margin-top: 0.75em;
+    margin-top: 14px;
 
     button {
       display: none;
@@ -381,9 +384,10 @@ $role-gap    : 1em;
   }
 
   .author__urls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25em 1em;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
     position: static;
     margin: 0;
     padding: 0;
@@ -397,13 +401,28 @@ $role-gap    : 1em;
     }
 
     li {
+      min-width: 0;
       margin: 0;
+      white-space: normal;
     }
 
     a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      min-height: 56px;
       margin: 0;
-      padding: 0.25em 0;
-      font-size: 15px;
+      padding: 4px 0;
+      font-size: 13px;
+      line-height: 1.25;
+      text-align: center;
+
+      i {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+      }
     }
   }
 }
