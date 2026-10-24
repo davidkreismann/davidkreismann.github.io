@@ -331,7 +331,7 @@ $role-gap    : 1em;
   /* Fill the mobile content width without the template's table-cell padding. */
   .author-profile {
     display: grid;
-    grid-template-columns: 56px minmax(0, 1fr) auto;
+    grid-template-columns: 64px minmax(0, 1fr) auto;
     align-items: center;
     column-gap: 10px;
     width: 100%;
@@ -361,14 +361,14 @@ $role-gap    : 1em;
   }
 
   .sidebar .author__name {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.25;
     margin: 0 0 3px;
   }
 
   .sidebar .author__bio,
   .sidebar .author__content p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.45;
   }
 
@@ -463,8 +463,11 @@ $role-gap    : 1em;
 
 /* Leave room for the localized contact button on narrow phones. */
 @media (max-width: 359px) {
-  .author-profile { column-gap: 8px; }
-  .sidebar .author__name { font-size: 16px; }
+  .author-profile {
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    column-gap: 8px;
+  }
+  .sidebar .author__name { font-size: 17px; }
   .sidebar .author__bio,
   .sidebar .author__content p { font-size: 13px; }
 }

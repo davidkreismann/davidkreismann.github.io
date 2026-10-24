@@ -15,7 +15,7 @@
 {% if site.author.avatar == 'profile.jpg' and page.author_profile %}
 <link rel="preload" as="image" href="{{ base_path }}/images/profile-224.webp"
       imagesrcset="{{ base_path }}/images/profile-128.webp 128w, {{ base_path }}/images/profile-224.webp 224w, {{ base_path }}/images/profile-352.webp 352w"
-      imagesizes="(min-width: 925px) 175px, 56px" fetchpriority="high">
+      imagesizes="(min-width: 925px) 175px, (max-width: 359px) 56px, 64px" fetchpriority="high">
 {% endif %}
 
 <!-- For all browsers -->

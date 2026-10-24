@@ -17,7 +17,7 @@
     {% elsif author.avatar == 'profile.jpg' %}
       <img src="{{ base_path }}/images/profile-224.webp"
            srcset="{{ base_path }}/images/profile-128.webp 128w, {{ base_path }}/images/profile-224.webp 224w, {{ base_path }}/images/profile-352.webp 352w"
-           sizes="(min-width: 925px) 175px, 56px"
+           sizes="(min-width: 925px) 175px, (max-width: 359px) 56px, 64px"
            alt="{{ author.name }}" width="400" height="400" fetchpriority="high" />
     {% else %}
       <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}" width="400" height="400" fetchpriority="high" />
