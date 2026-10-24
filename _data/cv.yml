@@ -42,18 +42,18 @@ experience:
     location: "Munich, Germany"
     date: "Apr. 2026 – present"
     details:
-      - "Built a physics simulation and a reinforcement-learning control baseline for a vision-based digital twin of soft robotic grippers. Now developing AutoSoftGrasp, which uses generative AI to design soft grippers for specific objects."
+      - "Built a physics simulation and a reinforcement-learning control baseline for a vision-based digital twin of soft robotic grippers and am now developing AutoSoftGrasp to design object-specific soft grippers using generative AI."
 
   - title: "Working Student"
     org: "IBM"
     date: "Oct. 2025 – present"
     roles:
       - title: "Managing Director's Office, Mercedes-Benz & Daimler Truck Account"
-        location: "Munich"
+        location: "Munich, Germany"
         date: "July 2026 – present"
         text: "Built an agentic workflow with IBM's agentic coding tool to map market trends to IBM products and business opportunities, using MCP servers, custom skills and agent modes"
       - title: "Director's Office for Data & AI, Technology"
-        location: "Munich"
+        location: "Munich, Germany"
         date: "Oct. 2025 – June 2026"
         text: "Developed agentic AI use cases and evaluated where IBM's Data & AI portfolio could support strategic and technical initiatives"
 
@@ -62,7 +62,7 @@ experience:
     date: "Sept. 2022 – Sept. 2025"
     roles:
       - title: "AI Solutions Intern, Director's Office for Data & AI"
-        location: "Boeblingen"
+        location: "Boeblingen, Germany"
         date: "July 2025 – Sept. 2025"
         text: "Architected agentic AI use cases within the IBM Data & AI ecosystem"
       - title: "Research Intern, IBM Research – Zurich"
@@ -78,11 +78,11 @@ experience:
         date: "Nov. 2023 – Jan. 2024"
         text: "Developed an unsupervised clustering approach to detect hardware anomalies in SFP modules from telemetry data"
       - title: "AI Solutions Intern, Industry Lab"
-        location: "Munich"
+        location: "Munich, Germany"
         date: "June 2023 – Sept. 2023"
         text: "Analyzed feature importance in a traffic jam forecasting model to quantify the impact of weather and event patterns on travel delays"
       - title: "Software Engineer Intern, Client Engineering"
-        location: "Ehningen"
+        location: "Ehningen, Germany"
         date: "Dec. 2022 – March 2023"
         text: "Developed a secure single-page application (React/Next.js) with integrated single sign-on"
 

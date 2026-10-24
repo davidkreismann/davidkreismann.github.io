@@ -2,6 +2,7 @@
 title: "Instagram Uploader"
 permalink: /de/projects/instagram-uploader/
 author_profile: true
+description: "Eine Web-App zum Planen und Veröffentlichen von Instagram-Beiträgen, Karussells und Stories."
 lang: de
 translation: /portfolio/2024-11-instagram-uploader/
 ---

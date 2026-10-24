@@ -141,17 +141,16 @@ Twitter username (site.twitter.username), matching upstream behavior.
 {% endif %}
 
 {% comment %} Open Graph protocol data (https://ogp.me/), used by social media {% endcomment %}
-<meta property="og:locale" content="{{ site.locale | default: "en" }}">
+<meta property="og:locale" content="{% if page.lang == 'de' %}de_DE{% else %}{{ site.locale | default: 'en_US' | replace: '-', '_' }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}"> 
 <meta property="og:title" content="{{ page.og_title | default: seo_title | default: site.title }}">
 {% if page.date %}
   <meta property="og:type" content="article">
+{% else %}
+  <meta property="og:type" content="website">
 {% endif %}
-{% comment %} og:description comes from the page excerpt, or falls back to site.og_description; it is not emitted otherwise. {% endcomment %}
-{% if page.excerpt %}
-  <meta property="og:description" name="description" content="{{ seo_description }}">
-{% elsif site.og_description %}
-  <meta property="og:description" name="description" content="{{ site.og_description }}">
+{% if seo_description %}
+  <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 {% if seo_url %}
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">

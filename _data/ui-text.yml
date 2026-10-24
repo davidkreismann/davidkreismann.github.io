@@ -360,3 +360,13 @@ zh-TW:
 
 # Another locale
 # --------------
+
+# German labels used on translated detail pages.
+de:
+  less_than: "weniger als"
+  minute_read: "Min. Lesezeit"
+  share_on_label: "Teilen auf"
+  citation_label: "Zitiervorschlag:"
+  paper_download: "Paper öffnen"
+  slides_download: "Folien herunterladen"
+  bibtex_download: "BibTeX herunterladen"

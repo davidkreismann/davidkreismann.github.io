@@ -10,14 +10,14 @@ translation: /
 
 Ich studiere im Master **Robotics, Cognition, Intelligence** an der [Technischen Universität München (TUM)](https://www.tum.de) und bin Werkstudent bei [IBM](https://www.ibm.com).
 
-Parallel dazu forsche ich im [CV4DT Lab](https://cv4dt.github.io/) der University of Cambridge und entwerfe dort aktuell mit generativer KI weiche Robotergreifer. Davor war ich bei IBM Research in [Zürich](https://research.ibm.com/labs/zurich) und [Almaden](https://research.ibm.com/labs/silicon-valley) sowie am [Karlsruhe Service Research Institute](https://www.ksri.kit.edu/) tätig.
+Parallel dazu forsche ich im [CV4DT Lab](https://cv4dt.github.io/) der University of Cambridge. Davor war ich bei IBM Research in [Zürich](https://research.ibm.com/labs/zurich) und [Almaden](https://research.ibm.com/labs/silicon-valley) sowie am [Karlsruhe Service Research Institute](https://www.ksri.kit.edu/) tätig.
 
 Forschungsinteressen
 ======
 * Deep Learning
 * Computer Vision
 * Robotik
-* Agentic AI
+* KI-Agenten
 
 Neuigkeiten
 ======

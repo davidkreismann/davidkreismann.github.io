@@ -23,7 +23,7 @@ Um zu sehen, wie oft Seiten aufgerufen werden, nutzt diese Website [GoatCounter]
 
 ## Cookies und lokaler Speicher
 
-Diese Website verwendet keine Cookies. Wenn du zwischen hellem und dunklem Modus oder zwischen Deutsch und Englisch wechselst, wird deine Auswahl im lokalen Speicher deines Browsers abgelegt, damit sie beim nächsten Besuch erhalten bleibt. Diese Daten verlassen dein Gerät nicht.
+Diese Website verwendet keine Cookies. Wenn du zwischen hellem und dunklem Modus wechselst, wird deine Auswahl im lokalen Speicher deines Browsers abgelegt, damit sie beim nächsten Besuch erhalten bleibt. Diese Daten verlassen dein Gerät nicht.
 
 ## Deine Rechte
 

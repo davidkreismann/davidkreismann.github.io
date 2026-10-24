@@ -1,0 +1,4 @@
+{% assign original = site.publications | where: "translation", page.url | first %}
+<div lang="en">
+  {{ original.content | remove_first: "**Abstract**" | remove_first: "<p><strong>Abstract</strong></p>" | markdownify }}
+</div>

@@ -2,6 +2,7 @@
 title: "Semantix"
 permalink: /de/projects/semantix/
 author_profile: true
+description: "Ein Worträtsel mit Text-Embeddings und Vektorsuche, bei dem die Bedeutung jedes Tipps zählt."
 lang: de
 translation: /portfolio/2025-01-semantix/
 ---

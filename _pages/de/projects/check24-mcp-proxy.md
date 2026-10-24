@@ -2,6 +2,7 @@
 title: "CHECK24 MCP Proxy"
 permalink: /de/projects/check24-mcp-proxy/
 author_profile: true
+description: "Ein zentraler MCP-Proxy für die Produktbereiche von CHECK24 mit Routing, Konformitätsprüfung, Versionierung und Telemetrie."
 lang: de
 translation: /portfolio/2026-04-check24-mcp-proxy/
 ---

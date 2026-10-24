@@ -4,8 +4,8 @@ date: 2026-10-24
 permalink: /de/posts/2026/10/willkommen/
 lang: de
 translation: /posts/2026/10/welcome-to-my-website/
-read_time: false
-share: false
+read_time: true
+share: true
 related: false
 ---
 

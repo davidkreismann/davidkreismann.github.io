@@ -1,0 +1,21 @@
+{% assign card = include.post %}
+{% assign card_url = card.url %}
+{% assign card_excerpt = card.excerpt %}
+{% if include.project and page.lang == 'de' %}
+  {% assign card_url = card.translation | default: card.url %}
+  {% assign card_excerpt = card.excerpt_de | default: card.excerpt %}
+{% endif %}
+<div class="project-card">
+  <div class="cv-entry__head">
+    <a class="project-card__title" href="{{ base_path }}{{ card_url }}">{{ card.title }}</a>
+  </div>
+  <p class="project-card__text">{{ card_excerpt | strip_html }}</p>
+  <div class="project-card__footer">
+    {% if include.project %}
+      {% if card.github %}<a class="project-card__link" href="{{ card.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+      <span class="project-card__stack">{{ card.stack | join: ", " }}</span>
+    {% else %}
+      <time class="project-card__stack" datetime="{{ card.date | date_to_xmlschema }}">{% if page.lang == 'de' %}{{ card.date | date: "%d.%m.%Y" }}{% else %}{{ card.date | date: "%B %-d, %Y" }}{% endif %}</time>
+    {% endif %}
+  </div>
+</div>

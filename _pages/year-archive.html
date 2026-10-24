@@ -3,6 +3,7 @@ layout: archive
 permalink: /blog/
 title: "Blog"
 author_profile: true
+description: "Posts by David Kreismann about research projects, software development and personal updates."
 translation: /de/blog/
 redirect_from:
   - /year-archive/
@@ -17,5 +18,5 @@ redirect_from:
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  {% include archive-card.html post=post %}
 {% endfor %}

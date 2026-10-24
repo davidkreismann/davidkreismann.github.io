@@ -3,6 +3,7 @@ layout: archive
 permalink: /de/blog/
 title: "Blog"
 author_profile: true
+description: "Blog von David Kreismann über Forschungsprojekte, Softwareentwicklung und persönliche Einblicke."
 lang: de
 translation: /blog/
 ---
@@ -15,5 +16,5 @@ translation: /blog/
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  {% include archive-card.html post=post %}
 {% endfor %}

@@ -29,6 +29,7 @@ function determineComputedTheme() {
 // theme is the stored preference or, failing that, the OS/browser preference.
 function setTheme(theme) {
   const use_theme = theme || determineComputedTheme();
+  $("#theme-toggle button").attr("aria-pressed", use_theme === "dark");
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -151,23 +152,7 @@ $(document).ready(function () {
         });
 
   // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
-
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  $(window).resize(function () {
-    didResize = true;
-  });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
-  bumpIt();
+  $('#theme-toggle button').on('click', toggleTheme);
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function () {
