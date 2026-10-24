@@ -1,7 +1,7 @@
 ---
 title: "CHECK24 MCP Proxy"
 excerpt: "One MCP endpoint that aggregates independent CHECK24 product verticals, with routing, conformance checks, versioning and telemetry. Built for the CHECK24 GenDev Scholarship Challenge."
-excerpt_de: "Ein einziger MCP-Endpunkt, der unabhängige CHECK24-Produktbereiche bündelt, mit Routing, Conformance-Prüfungen, Versionierung und Telemetrie. Entstanden für die CHECK24 GenDev Scholarship Challenge."
+excerpt_de: "Ein zentraler MCP-Endpunkt, der die unabhängigen Produktbereiche von CHECK24 bündelt, inklusive Routing, Conformance-Prüfung, Versionierung und Telemetrie. Entstanden für die CHECK24 GenDev Scholarship Challenge."
 collection: portfolio
 translation: /de/projects/check24-mcp-proxy/
 year: 2026

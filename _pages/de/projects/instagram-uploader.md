@@ -6,4 +6,4 @@ lang: de
 translation: /portfolio/2024-11-instagram-uploader/
 ---
 
-Eine Web-App, die die Verwaltung eines Instagram-Accounts erleichtert. Man meldet sich mit seinem Instagram-Account an, lädt Bilder und Videos per Drag and Drop hoch und legt fest, wann jeder Beitrag online gehen soll.
+Eine Web-App, die das Verwalten eines Instagram-Kontos erleichtert. Du meldest dich mit deinem Instagram-Account an, lädst Bilder und Videos per Drag-and-drop hoch und legst fest, wann jeder Beitrag online geht.

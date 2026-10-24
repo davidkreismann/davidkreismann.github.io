@@ -4,7 +4,7 @@
 <div class="page__footer-follow">
   <ul class="social-icons">
     {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+      <li><strong>{% if page.lang == 'de' %}Folgen:{% else %}{{ site.data.ui-text[site.locale].follow_label }}{% endif %}</strong></li>
     {% endif %}
     {% if site.author.github %}
       <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
@@ -20,6 +20,6 @@
 {% endif %}
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}, {% if page.lang == 'de' %}<a href="{{ base_path }}/de/datenschutz/" style="text-transform: uppercase;">Datenschutz</a>{% else %}<a href="{{ base_path }}/privacy/" style="text-transform: uppercase;">Privacy</a>{% endif %}
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {% if page.lang == 'de' %}erstellt mit{% else %}{{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}{% endif %} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, {% if page.lang == 'de' %}basierend auf{% else %}a fork of{% endif %} <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+  {% if page.lang == 'de' %}Zuletzt aktualisiert am {{ "now" | date: '%d.%m.%Y' }}{% else %}Site last updated {{ "now" | date: '%Y-%m-%d' }}{% endif %}, {% if page.lang == 'de' %}<a href="{{ base_path }}/de/datenschutz/" style="text-transform: uppercase;">Datenschutz</a>{% else %}<a href="{{ base_path }}/privacy/" style="text-transform: uppercase;">Privacy</a>{% endif %}
 </div>

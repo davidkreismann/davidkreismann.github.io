@@ -22,7 +22,7 @@ Research interests
 
 News
 ======
-* **Jun 2026** – Our paper *PTO: A Workload-driven Predictive Table Optimizer for Lakehouse Systems* is presented at **SIGMOD 2026**.
+* **Jun 2026** – Our paper *PTO: A Workload-driven Predictive Table Optimizer for Lakehouse Systems* was presented at **SIGMOD 2026**.
 * **Jun 2026** – Awarded the **GenDev IT Scholarship** by CHECK24.
 * **Apr 2026** – Started as visiting researcher at the CV4DT Lab, University of Cambridge.
 * **Dec 2025** – My bachelor thesis received the **Best Bachelor Thesis Award in Artificial Intelligence** (ZfKI).
