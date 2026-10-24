@@ -125,8 +125,10 @@ $role-gap    : 1em;
 }
 
 .project-card__title {
+  /* same size as the entry titles on the publications and blog pages */
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: $type-size-4;
+  line-height: 1.2;
   text-decoration: none;
 
   &:hover {
@@ -163,9 +165,18 @@ $role-gap    : 1em;
   white-space: nowrap;
 }
 
-/* page and archive links are underlined by default; keep card and CV titles clean until hover */
+/* One link style for the whole site: titles of entries (publications, blog posts,
+   projects, CV) and action links are plain until hover; links inside running text
+   keep a thin underline so they stay recognizable */
+.page__content a,
+.archive a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 .page__content,
 .archive {
+  .archive__item-title a,
   .project-card__title,
   .project-card__link,
   a.cv-entry__title {

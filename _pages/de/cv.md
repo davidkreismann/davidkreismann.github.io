@@ -59,7 +59,6 @@ translation: /cv/
   <h2>Ehrenamtliches Engagement</h2>
   {% for entry in site.data.cv_de.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
-<div class="project-card__footer project-meta cv-download">
-  <span class="project-card__stack">Vollständiger Lebenslauf mit Skills und Sprachen, auf Englisch</span>
-  <a class="project-card__link" href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF herunterladen</a>
+<div class="project-meta cv-download">
+  <a class="project-card__link" href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Vollständiger Lebenslauf (PDF, Englisch)</a>
 </div>
