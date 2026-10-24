@@ -141,3 +141,30 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", eve
   if (!localStorage.getItem("theme")) setTheme(event.matches ? "dark" : "light");
 });
 document.querySelector('#theme-toggle button').addEventListener('click', toggleTheme);
+
+// Mobile contact links: native disclosure with keyboard and outside-click dismissal.
+const authorLinksWrapper = document.querySelector('.author__urls-wrapper');
+if (authorLinksWrapper) {
+  const authorLinksToggle = authorLinksWrapper.querySelector('#author-links-toggle');
+  function closeAuthorLinks(restoreFocus = false) {
+    authorLinksWrapper.classList.remove('is-open');
+    authorLinksToggle.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) authorLinksToggle.focus();
+  }
+  authorLinksToggle.addEventListener('click', () => {
+    const open = authorLinksWrapper.classList.toggle('is-open');
+    authorLinksToggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', event => {
+    if (!authorLinksWrapper.contains(event.target)) closeAuthorLinks();
+  });
+  authorLinksWrapper.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && authorLinksWrapper.classList.contains('is-open')) {
+      closeAuthorLinks(true);
+      event.preventDefault();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 925) closeAuthorLinks();
+  });
+}

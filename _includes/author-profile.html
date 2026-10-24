@@ -17,7 +17,7 @@
     {% elsif author.avatar == 'profile.jpg' %}
       <img src="{{ base_path }}/images/profile-224.webp"
            srcset="{{ base_path }}/images/profile-128.webp 128w, {{ base_path }}/images/profile-224.webp 224w, {{ base_path }}/images/profile-352.webp 352w"
-           sizes="(min-width: 925px) 175px, 80px"
+           sizes="(min-width: 925px) 175px, 56px"
            alt="{{ author.name }}" width="400" height="400" fetchpriority="high" />
     {% else %}
       <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}" width="400" height="400" fetchpriority="high" />
@@ -31,8 +31,8 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{% if page.lang == 'de' %}Folgen{% else %}Follow{% endif %}</button>
-    <ul class="author__urls social-icons">
+    <button id="author-links-toggle" class="author__links-toggle" type="button" aria-expanded="false" aria-controls="author-links-list" aria-label="{% if page.lang == 'de' %}Kontaktlinks{% else %}Contact links{% endif %}">{% if page.lang == 'de' %}Kontakt{% else %}Contact{% endif %}</button>
+    <ul id="author-links-list" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author_location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author_location }}</li>

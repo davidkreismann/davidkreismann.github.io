@@ -331,9 +331,9 @@ $role-gap    : 1em;
   /* Fill the mobile content width without the template's table-cell padding. */
   .author-profile {
     display: grid;
-    grid-template-columns: 80px minmax(0, 1fr);
+    grid-template-columns: 56px minmax(0, 1fr) auto;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 10px;
     width: 100%;
   }
 
@@ -361,62 +361,94 @@ $role-gap    : 1em;
   }
 
   .sidebar .author__name {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.25;
     margin: 0 0 3px;
   }
 
   .sidebar .author__bio,
   .sidebar .author__content p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.45;
   }
 
-  /* Use the full width for five equally spaced, labeled contact links. */
+  /* Keep contact links behind a disclosure beside the mobile profile. */
   .author__urls-wrapper {
-    display: block;
-    grid-column: 1 / -1;
-    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0;
+    z-index: 20;
+  }
 
-    button {
-      display: none;
+  .author__links-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: clamp(64px, calc(50vw - 100px), 96px);
+    min-height: 36px;
+    margin: 0;
+    padding: 4px 8px;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    color: var(--global-text-color);
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1.2;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: translateY(2px) rotate(225deg);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-link-color);
+      outline-offset: 3px;
     }
   }
 
   .author__urls {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 8px;
-    width: 100%;
-    position: static;
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 220px;
+    max-width: calc(100vw - 32px);
     margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    background: transparent;
+    padding: 6px 8px;
+    border: 1px solid var(--global-border-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    background: var(--global-bg-color);
+    z-index: 30;
 
     &:before,
-    &:after {
-      display: none;
-    }
+    &:after { display: none; }
 
-    li {
-      min-width: 0;
-      margin: 0;
-      white-space: normal;
-    }
+    li { margin: 0; }
 
     a {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 5px;
-      min-height: 56px;
+      gap: 9px;
+      min-height: 40px;
       margin: 0;
-      padding: 4px 0;
-      font-size: 13px;
-      line-height: 1.25;
-      text-align: center;
+      padding: 7px 8px;
+      font-size: 14px;
+      line-height: 1.4;
 
       i {
         margin: 0;
@@ -425,4 +457,14 @@ $role-gap    : 1em;
       }
     }
   }
+
+  .author__urls-wrapper.is-open .author__urls { display: block; }
+}
+
+/* Leave room for the localized contact button on narrow phones. */
+@media (max-width: 359px) {
+  .author-profile { column-gap: 8px; }
+  .sidebar .author__name { font-size: 16px; }
+  .sidebar .author__bio,
+  .sidebar .author__content p { font-size: 13px; }
 }
