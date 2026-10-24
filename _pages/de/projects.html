@@ -13,7 +13,7 @@ translation: /projects/
 {% for post in site.portfolio reversed %}
 <div class="project-card">
   <div class="cv-entry__head">
-    <a class="project-card__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    <a class="project-card__title" href="{{ base_path }}{{ post.translation | default: post.url }}">{{ post.title }}</a>
     <span class="cv-entry__date">{{ post.year }}</span>
   </div>
   <p class="project-card__text">{{ post.excerpt_de | default: post.excerpt | strip_html }}</p>

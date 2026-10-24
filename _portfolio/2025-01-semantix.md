@@ -3,6 +3,7 @@ title: "Semantix"
 excerpt: "A word guessing game where every guess is scored by how close its meaning is to the secret word, using text embeddings and vector search. In German and English."
 excerpt_de: "Ein Worträtsel, bei dem jeder Tipp danach bewertet wird, wie nah seine Bedeutung am gesuchten Wort ist, mit Text-Embeddings und Vektorsuche. Auf Deutsch und Englisch."
 collection: portfolio
+translation: /de/projects/semantix/
 year: 2025
 stack: ["TypeScript", "Next.js", "Python", "Pinecone"]
 github: "https://github.com/xdavld/Semantix"

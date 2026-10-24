@@ -34,7 +34,7 @@ experience:
     location: "München, Deutschland"
     date: "Apr. 2026 – heute"
     details:
-      - "Physiksimulation eines Drei-Finger-Soft-Greifers und eine Reinforcement-Learning-Regelung als Baseline für einen kamerabasierten digitalen Zwilling von Soft-Robotic-Greifern entwickelt. Aktuell Entwicklung von AutoSoftGrasp, das mit generativer KI Soft-Greifer für bestimmte Objekte entwirft."
+      - "Physiksimulation eines Soft-Greifers mit drei Fingern und eine Regelung per Reinforcement Learning für einen kamerabasierten digitalen Zwilling entwickelt. Aktuell arbeite ich an AutoSoftGrasp, das mit generativer KI Soft-Greifer für bestimmte Objekte entwirft."
 
   - title: "Werkstudent"
     org: "IBM"
@@ -43,11 +43,11 @@ experience:
       - title: "Managing Director's Office, Mercedes-Benz & Daimler Truck Account"
         location: "München"
         date: "Juli 2026 – heute"
-        text: "Agentischen Workflow mit IBMs agentischem Coding-Tool aufgebaut, der Markttrends auf IBM-Produkte und Geschäftschancen abbildet, mit MCP-Servern, eigenen Skills und Agent-Modi"
+        text: "Mit IBMs agentischem Coding-Tool einen Workflow gebaut, der Markttrends passenden IBM-Produkten und Geschäftschancen zuordnet, mit MCP-Servern, eigenen Skills und Agent-Modi"
       - title: "Director's Office for Data & AI, Technology"
         location: "München"
         date: "Okt. 2025 – Juni 2026"
-        text: "Agentic-AI-Use-Cases entwickelt und bewertet, wo IBMs Data-&-AI-Portfolio strategische und technische Initiativen unterstützen kann"
+        text: "Use Cases für Agentic AI entwickelt und bewertet, wo das Data & AI Portfolio von IBM strategische und technische Vorhaben unterstützen kann"
 
   - title: "Dualer Student"
     org: "IBM"
@@ -56,7 +56,7 @@ experience:
       - title: "AI Solutions Intern, Director's Office for Data & AI"
         location: "Böblingen"
         date: "Juli 2025 – Sept. 2025"
-        text: "Agentic-AI-Use-Cases im IBM-Data-&-AI-Ökosystem konzipiert"
+        text: "Use Cases für Agentic AI im Data & AI Portfolio von IBM konzipiert"
       - title: "Research Intern, IBM Research – Zürich"
         location: "Zürich, Schweiz"
         date: "Feb. 2025 – Mai 2025"
@@ -64,11 +64,11 @@ experience:
       - title: "Research Intern, IBM Almaden Research Center"
         location: "San José, USA"
         date: "Juni 2024 – Sept. 2024"
-        text: "Einen workload-basierten Predictive Table Optimizer für die IBM-Lakehouse-Architektur mitentwickelt, der die Abfragelatenz durch automatisches Parameter-Tuning um bis zu 36 % senkt (angenommen bei der SIGMOD 2026)"
+        text: "Einen Predictive Table Optimizer für die Lakehouse-Architektur von IBM mitentwickelt, der Tabellenparameter passend zur Workload automatisch einstellt und die Abfragelatenz um bis zu 36 % senkt (angenommen bei der SIGMOD 2026)"
       - title: "AI Engineer Intern, Technology Infrastructure"
         location: "Lausanne, Schweiz"
         date: "Nov. 2023 – Jan. 2024"
-        text: "Unüberwachtes Clustering-Verfahren entwickelt, das Hardware-Anomalien in SFP-Modulen anhand von Telemetriedaten erkennt"
+        text: "Einen Ansatz mit Unsupervised Clustering entwickelt, der Hardware-Anomalien in SFP-Modulen anhand von Telemetriedaten früh erkennt"
       - title: "AI Solutions Intern, Industry Lab"
         location: "München"
         date: "Juni 2023 – Sept. 2023"
@@ -76,14 +76,14 @@ experience:
       - title: "Software Engineer Intern, Client Engineering"
         location: "Ehningen"
         date: "Dez. 2022 – März 2023"
-        text: "Sichere Single-Page-Application (React/Next.js) mit integriertem Single Sign-on entwickelt"
+        text: "Eine sichere Single Page Application (React/Next.js) mit Single Sign-on entwickelt"
 
   - title: "Research Intern"
     org: "Karlsruhe Service Research Institute"
     location: "Karlsruhe, Deutschland"
     date: "Sept. 2024 – Nov. 2024"
     details:
-      - "Mehrere Retrieval-Augmented-Generation-Strategien (RAG) für einen domänenspezifischen Chatbot implementiert, um Kontextsuche und Antwortqualität zu verbessern"
+      - "Mehrere RAG-Strategien (Retrieval-Augmented Generation) für einen fachspezifischen Chatbot umgesetzt, um Kontextsuche und Antwortqualität zu verbessern"
 
   - title: "Infrastructure Engineer"
     org: "move:elevator GmbH"
@@ -97,7 +97,7 @@ awards:
     org: "CHECK24"
     date: "Juni 2026"
     details:
-      - "Leistungsstipendium für herausragende akademische Leistungen und technische Expertise in der Softwareentwicklung"
+      - "Stipendium für herausragende Studienleistungen und technische Expertise in der Softwareentwicklung"
   - title: "Preis für die beste Bachelorarbeit im Bereich Künstliche Intelligenz"
     org: "ZfKI"
     date: "Dez. 2025"
@@ -107,12 +107,12 @@ awards:
     org: "sdw e.V."
     date: "Okt. 2025"
     details:
-      - "Leistungsstipendium für herausragende akademische Leistungen und gesellschaftliches Engagement"
+      - "Stipendium für herausragende Studienleistungen und gesellschaftliches Engagement"
   - title: "PROMOS-Stipendium"
     org: "DAAD"
     date: "Dez. 2023"
     details:
-      - "Leistungsstipendium zur Förderung meines Auslandssemesters"
+      - "Stipendium zur Förderung meines Auslandssemesters"
 
 activities:
   - title: "MINGA Mentor"
@@ -120,4 +120,4 @@ activities:
     location: "München, Deutschland"
     date: "März 2026 – heute"
     details:
-      - "Unterstützung internationaler Studierender beim Ankommen an der Universität mit Behördengängen, Stadtführungen und Gruppenaktivitäten"
+      - "Ich helfe internationalen Studierenden, an der TUM und in München anzukommen, zum Beispiel bei Behördengängen, mit Stadtführungen und gemeinsamen Aktivitäten"
