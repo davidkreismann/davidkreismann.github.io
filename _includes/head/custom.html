@@ -2,6 +2,17 @@
 
 <!-- start custom head snippets -->
 
+<!-- Remember the language picked with the DE/EN switch; only the English home page redirects to /de/ when German was picked last. No detection by browser language. -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('#lang-toggle a');
+    if (link) { try { localStorage.setItem('lang', link.getAttribute('hreflang')); } catch (e) {} }
+  });
+  {% if page.url == '/' %}
+  try { if (localStorage.getItem('lang') === 'de') { location.replace('{{ base_path }}/de/'); } } catch (e) {}
+  {% endif %}
+</script>
+
 <!-- Google Scholar and schema.org metadata for publication pages -->
 {% if page.collection == 'publications' %}
   {% if page.category != 'patents' %}

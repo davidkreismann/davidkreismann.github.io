@@ -22,7 +22,7 @@ To see how often pages are visited, this website uses [GoatCounter](https://www.
 
 ## Cookies and local storage
 
-This website does not use cookies. If you switch between light and dark mode, your choice is saved in your browser's local storage so that it is kept on your next visit. This data never leaves your device.
+This website does not use cookies. If you switch between light and dark mode or between English and German, your choice is saved in your browser's local storage so that it is kept on your next visit. This data never leaves your device.
 
 ## Your rights
 
