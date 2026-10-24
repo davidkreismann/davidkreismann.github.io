@@ -1,0 +1,171 @@
+---
+layout: null
+permalink: /files/David_Kreismann_CV.tex
+sitemap: false
+---
+{%- comment -%}
+LaTeX source of the CV PDF, filled from _data/cv.yml and _publications.
+The deploy workflow compiles it to /files/David_Kreismann_CV.pdf.
+Layout based on Jake Gutierrez's resume template (MIT).
+{%- endcomment -%}
+{% raw %}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[letterpaper, left=0.3in, right=0.3in, top=0.3in, bottom=0.3in]{geometry}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+      \textit{\footnotesize #3} & \textit{\footnotesize #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeWideHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{p{0.80\textwidth}@{\extracolsep{\fill}}r}
+      {\small\textbf{#1}} & {\small #2} \\
+      {\small\textit{#3}} & {\small\textit{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSmallHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\small\textbf{#1}} & {\small #2} \\
+      {\small\textit{#3}} & {\small\textit{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+{% endraw %}
+\begin{center}
+  \textbf{\Huge \scshape {% include latex.html text=site.author.name %}} \\ \vspace{1pt}
+  \small \href{mailto:{{ site.author.email }}}{\underline{ {{- site.author.email -}} }} $|$
+  \href{ {{- site.url -}} }{\underline{ {{- site.url | remove: "https://" -}} }} $|$
+  \href{https://linkedin.com/in/{{ site.author.linkedin }}}{\underline{linkedin.com/in/{{ site.author.linkedin }}}} $|$
+  \href{https://github.com/{{ site.author.github }}}{\underline{github.com/{{ site.author.github }}}}
+\end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+{%- for e in site.data.cv.education %}
+  \resumeSubheading{ {%- include latex.html text=e.org -%} }{ {%- include latex.html text=e.location -%} }{ {%- include latex.html text=e.title -%} }{ {%- include latex.html text=e.date -%} }
+  {%- assign items = e.pdf_details | default: e.details %}
+  {%- if items %}
+  \resumeItemListStart
+    {%- for d in items %}
+    \resumeItem{ {%- include latex.html text=d -%} }
+    {%- endfor %}
+  \resumeItemListEnd
+  {%- endif %}
+{%- endfor %}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+{%- for e in site.data.cv.experience %}
+  \resumeSubheading{ {%- include latex.html text=e.title -%} }{ {%- include latex.html text=e.date -%} }{ {%- include latex.html text=e.org -%} }{ {%- include latex.html text=e.location -%} }
+  {%- if e.details %}
+  \resumeItemListStart
+    {%- for d in e.details %}
+    \resumeItem{ {%- include latex.html text=d -%} }
+    {%- endfor %}
+  \resumeItemListEnd
+  {%- endif %}
+  {%- for r in e.roles %}
+    {%- assign parts = r.title | split: ", " %}
+    \resumeSubSubheading{ {%- include latex.html text=parts.first -%} }{ {%- include latex.html text=r.date -%} }{ {%- assign rest = parts | shift | join: ", " -%}{%- include latex.html text=rest -%} }{ {%- include latex.html text=r.location -%} }
+    \resumeItemListStart
+      \resumeItem{ {%- include latex.html text=r.text -%} }
+    \resumeItemListEnd
+  {%- endfor %}
+{%- endfor %}
+\resumeSubHeadingListEnd
+
+{%- assign months = "Jan.,Feb.,March,April,May,June,July,Aug.,Sept.,Oct.,Nov.,Dec." | split: "," %}
+\section{Publications and Patents}
+\resumeSubHeadingListStart
+{%- for post in site.publications reversed %}
+  {%- assign authors = post.citation | split: '. (' | first %}
+  \resumeWideHeading{ {%- if post.pdfurl -%}\href{ {{- post.pdfurl -}} }{ {%- include latex.html text=post.title -%} }{%- else -%}{%- include latex.html text=post.title -%}{%- endif -%} }{ {%- assign month = post.date | date: "%-m" | minus: 1 -%}{{- months[month] }} {{ post.date | date: "%Y" -}} }{ {%- include latex.html text=authors -%} }{ {%- include latex.html text=post.venue_short -%} }
+{%- endfor %}
+\resumeSubHeadingListEnd
+
+\section{Honours and Awards}
+\resumeSubHeadingListStart
+{%- for e in site.data.cv.awards %}
+  \resumeWideHeading{ {%- include latex.html text=e.title -%} }{ {%- include latex.html text=e.date -%} }{ {%- include latex.html text=e.details.first -%} }{ {%- assign org = e.pdf_org | default: e.org -%}{%- include latex.html text=org -%} }
+{%- endfor %}
+\resumeSubHeadingListEnd
+
+\section{Extracurricular Activities}
+\resumeSubHeadingListStart
+{%- for e in site.data.cv.activities %}
+  \resumeSmallHeading{ {%- include latex.html text=e.title -%} }{ {%- include latex.html text=e.date -%} }{ {%- include latex.html text=e.org -%} }{ {%- include latex.html text=e.location -%} }
+  \resumeItemListStart
+    {%- for d in e.details %}
+    \resumeItem{ {%- include latex.html text=d -%} }
+    {%- endfor %}
+  \resumeItemListEnd
+{%- endfor %}
+\resumeSubHeadingListEnd
+{% for s in site.data.cv.pdf_sections %}
+\section{ {%- include latex.html text=s.title -%} }
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+  {%- for l in s.lines %}
+    \textbf{ {%- include latex.html text=l.label -%} }: {% include latex.html text=l.text %}{% unless forloop.last %} \\{% endunless %}
+  {%- endfor %}
+  }}
+\end{itemize}
+{% endfor %}
+\end{document}

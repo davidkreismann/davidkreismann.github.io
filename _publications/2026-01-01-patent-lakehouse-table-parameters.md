@@ -1,6 +1,8 @@
 ---
 title: "Workload-driven Predictive Optimization of Lakehouse Table Parameters"
 collection: publications
+venue_short: "Patent"
+authors: ["Venkata Vamsikrishna Meduri", "David Kreismann", "Berthold Reinwald", "Ronald J. Barber"]
 category: patents
 permalink: /publication/2026-patent-lakehouse-table-parameters
 excerpt: 'Patent based on the approach behind <a href="/publication/2026-pto-predictive-table-optimizer">PTO (SIGMOD 2026)</a>: automatically choosing partitioning columns, target file size, row group size and sort strategy of lakehouse tables from the filter predicates of the query workload.'

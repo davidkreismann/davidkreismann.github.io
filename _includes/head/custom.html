@@ -2,6 +2,33 @@
 
 <!-- start custom head snippets -->
 
+<!-- Google Scholar and schema.org metadata for publication pages -->
+{% if page.collection == 'publications' %}
+  {% if page.category != 'patents' %}
+<meta name="citation_title" content="{{ page.title | escape }}">
+    {% for author in page.authors %}<meta name="citation_author" content="{{ author | escape }}">
+    {% endfor %}
+<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+    {% if page.journal %}<meta name="citation_journal_title" content="{{ page.journal | escape }}">{% endif %}
+    {% if page.conference %}<meta name="citation_conference_title" content="{{ page.conference | escape }}">{% endif %}
+    {% if page.doi %}<meta name="citation_doi" content="{{ page.doi }}">{% endif %}
+    {% if page.arxiv %}<meta name="citation_arxiv_id" content="{{ page.arxiv }}">{% endif %}
+    {% if page.pdfurl %}<meta name="citation_pdf_url" content="{{ page.pdfurl }}">{% endif %}
+  {% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{% if page.category == 'patents' %}CreativeWork{% else %}ScholarlyArticle{% endif %}",
+  "headline": {{ page.title | jsonify }},
+  "author": [{% for author in page.authors %}{"@type": "Person", "name": {{ author | jsonify }}{% if author == site.name %}, "url": {{ site.url | jsonify }}{% endif %}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+  {% if page.conference %}"isPartOf": {{ page.conference | jsonify }},{% endif %}
+  {% if page.doi %}"sameAs": "https://doi.org/{{ page.doi }}",{% elsif page.arxiv %}"sameAs": "https://arxiv.org/abs/{{ page.arxiv }}",{% endif %}
+  "url": "{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+}
+</script>
+{% endif %}
+
 <!-- Language alternates for pages that exist in English and German -->
 {% if page.translation %}
   {% if page.lang == 'de' %}{% assign url_en = page.translation %}{% assign url_de = page.url %}{% else %}{% assign url_en = page.url %}{% assign url_de = page.translation %}{% endif %}

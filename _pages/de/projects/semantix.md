@@ -6,8 +6,4 @@ lang: de
 translation: /portfolio/2025-01-semantix/
 ---
 
-Semantix ist ein Browserspiel rund um die Bedeutung von Wörtern. Ziel ist es, ein geheimes Wort zu finden. Nach jedem Tipp zeigt das Spiel, wie nah dessen Bedeutung am gesuchten Wort liegt. So tastet man sich über die Bedeutung an die Lösung heran und nicht über die Schreibweise.
-
-**Stack:** TypeScript, Next.js, Python, PyTorch und Hugging Face Transformers, spaCy, Pinecone, Vercel
-
-[Code auf GitHub](https://github.com/xdavld/Semantix)
+Semantix ist ein Worträtsel im Browser. Gesucht wird ein geheimes Wort, und nach jedem Tipp zeigt das Spiel, wie ähnlich die Bedeutung deines Tipps dem gesuchten Wort ist. So kommst du der Lösung Schritt für Schritt über die Bedeutung näher, nicht über die Schreibweise.

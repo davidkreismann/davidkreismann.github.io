@@ -23,7 +23,7 @@ repository               : "xdavld/xdavld.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "David Kreismann"
   pronouns         : # example: "she/her"  
   bio              : "M.Sc. RCI @ TUM<br>Working Student @ IBM"
@@ -159,6 +159,9 @@ og_description           :  # Social media default site image description
 social:
   type                   : Person
   name                   : "David Kreismann"
+  job_title              : "M.Sc. Student in Robotics, Cognition, Intelligence"
+  affiliations           : ["Technical University of Munich", "IBM"]
+  alumni_of              : ["Baden-Wuerttemberg Cooperative State University Stuttgart", "University College Dublin"]
   links: # An array of links to social media profiles
     - "https://scholar.google.de/citations?user=la1vsskAAAAJ"
     - "https://orcid.org/0009-0000-0626-7409"
@@ -210,12 +213,6 @@ exclude:
   - README.md
   - docker-compose.yaml
   - _config_docker.yml
-  - markdown_generator
-  - scripts
-  - talkmap
-  - talkmap.ipynb
-  - talkmap.py
-  - talkmap_out.ipynb
 keep_files:
   - .git
   - .svn

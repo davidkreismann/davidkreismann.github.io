@@ -6,11 +6,8 @@ collection: portfolio
 translation: /de/projects/semantix/
 year: 2025
 stack: ["TypeScript", "Next.js", "Python", "Pinecone"]
+stack_full: ["TypeScript", "Next.js", "Python", "PyTorch", "Hugging Face Transformers", "spaCy", "Pinecone", "Vercel"]
 github: "https://github.com/xdavld/Semantix"
 ---
 
 Semantix is a browser game about the meaning of words. Players try to find a secret target word, and after every guess the game shows how semantically close the guess is, so you work your way towards the answer by meaning rather than by spelling.
-
-**Stack:** TypeScript, Next.js, Python, PyTorch and Hugging Face Transformers, spaCy, Pinecone, Vercel
-
-[Code on GitHub](https://github.com/xdavld/Semantix)

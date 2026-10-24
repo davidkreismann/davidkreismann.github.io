@@ -1,0 +1,3 @@
+{%- comment -%} Note: replace uses Ruby gsub, so a literal \& must be written as \\&. Escape a CV string for LaTeX: special characters, <i>/<b> tags and the * marking equal contribution. {%- endcomment -%}
+{%- assign t = include.text | replace: "&amp;", "&" | replace: "&", "\\&" | replace: "%", "\%" | replace: "#", "\#" | replace: "_", "\_" | replace: "$", "\$" | replace: "<i>", "\textit{" | replace: "</i>", "}" | replace: "<b>", "\textbf{" | replace: "</b>", "}" | replace: "*", "\textsuperscript{*}" -%}
+{{- t -}}

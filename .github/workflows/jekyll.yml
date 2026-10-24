@@ -41,6 +41,26 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      # The CV PDF is generated from _data/cv.yml via _pages/cv-pdf.tex
+      - name: Compile CV PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: David_Kreismann_CV.tex
+          working_directory: _site/files
+      - name: Remove LaTeX sources and build files
+        run: sudo find _site/files -name 'David_Kreismann_CV.*' ! -name '*.pdf' -delete
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Shrink icon fonts to the icons in use
+        run: |
+          pip install fonttools brotli
+          python .github/scripts/subset_icon_fonts.py _site
+      - name: Check internal links
+        run: |
+          gem install html-proofer --no-document
+          htmlproofer _site --disable-external --swap-urls '^https\://xdavld\.github\.io:' --allow-missing-href --ignore-empty-alt
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5.0.0
 

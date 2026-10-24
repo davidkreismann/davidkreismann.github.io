@@ -1,0 +1,12 @@
+{% comment %} Stack and code link under a project page, styled like the project list. German project pages look up their English project by `translation`. {% endcomment %}
+{% if page.collection == 'portfolio' %}
+  {% assign project = page %}
+{% else %}
+  {% assign project = site.portfolio | where: "translation", page.url | first %}
+{% endif %}
+{% if project %}
+<div class="project-card__footer project-meta">
+  <span class="project-card__stack">{{ project.stack_full | default: project.stack | join: " · " }}</span>
+  {% if project.github %}<a class="project-card__link" href="{{ project.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+</div>
+{% endif %}

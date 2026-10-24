@@ -111,6 +111,10 @@ Twitter username (site.twitter.username), matching upstream behavior.
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.social.name | default: site.name }}",
       "url" : {{ seo_url | jsonify }},
+      {% if site.social.job_title %}"jobTitle" : {{ site.social.job_title | jsonify }},{% endif %}
+      {% if site.social.affiliations %}"affiliation" : [{% for org in site.social.affiliations %}{"@type" : "Organization", "name" : {{ org | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],{% endif %}
+      {% if site.social.alumni_of %}"alumniOf" : [{% for org in site.social.alumni_of %}{"@type" : "CollegeOrUniversity", "name" : {{ org | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],{% endif %}
+      {% if site.author.avatar %}"image" : {{ site.author.avatar | prepend: "/images/" | prepend: site.baseurl | prepend: site.url | jsonify }},{% endif %}
       "sameAs" : {{ site.social.links | jsonify }}
     }
   </script>
