@@ -58,6 +58,10 @@ jobs:
           pip install fonttools brotli
           python .github/scripts/subset_icon_fonts.py _site
       - name: Check internal links
+        # html-proofer silently skips pages with umlauts unless the locale is UTF-8
+        env:
+          LANG: C.UTF-8
+          LC_ALL: C.UTF-8
         run: |
           gem install html-proofer --no-document
           htmlproofer _site --disable-external --swap-urls '^https\://xdavld\.github\.io:' --allow-missing-href --ignore-empty-alt
