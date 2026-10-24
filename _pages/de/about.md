@@ -9,7 +9,7 @@ translation: /
 
 Ich studiere im Master **Robotics, Cognition, Intelligence** an der [Technischen Universität München (TUM)](https://www.tum.de) und bin Werkstudent bei [IBM](https://www.ibm.com).
 
-Auf meinem bisherigen Weg habe ich an Forschungsprojekten im CV4DT Lab der University of Cambridge gearbeitet, wo ich mich aktuell damit beschäftige, Soft-Robotic-Greifer mit generativer KI zu entwerfen. Davor war ich bei IBM Research in Zürich und Almaden sowie am Karlsruhe Service Research Institute tätig.
+Auf meinem bisherigen Weg habe ich an Forschungsprojekten im [CV4DT Lab](https://cv4dt.github.io/) der University of Cambridge gearbeitet, wo ich mich aktuell damit beschäftige, Soft-Robotic-Greifer mit generativer KI zu entwerfen. Davor war ich bei IBM Research in [Zürich](https://research.ibm.com/labs/zurich) und [Almaden](https://research.ibm.com/labs/silicon-valley) sowie am [Karlsruhe Service Research Institute](https://www.ksri.kit.edu/) tätig.
 
 Forschungsinteressen
 ======

@@ -10,7 +10,6 @@ translation: /cv/
 
 {% include base_path %}
 
-<p class="cv-download"><a href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Lebenslauf als PDF (Englisch)</a></p>
 
 <div class="cv-section">
   <h2>Ausbildung</h2>
@@ -59,3 +58,4 @@ translation: /cv/
   <h2>Ehrenamtliches Engagement</h2>
   {% for entry in site.data.cv_de.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
+<p class="cv-download"><a href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Lebenslauf als PDF (Englisch)</a></p>

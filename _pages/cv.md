@@ -11,7 +11,6 @@ redirect_from:
 
 {% include base_path %}
 
-<p class="cv-download"><a href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV as PDF</a></p>
 
 <div class="cv-section">
   <h2>Education</h2>
@@ -60,3 +59,4 @@ redirect_from:
   <h2>Extracurricular Activities</h2>
   {% for entry in site.data.cv.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
+<p class="cv-download"><a href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV as PDF</a></p>
