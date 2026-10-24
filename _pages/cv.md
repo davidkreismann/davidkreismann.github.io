@@ -59,4 +59,7 @@ redirect_from:
   <h2>Extracurricular Activities</h2>
   {% for entry in site.data.cv.activities %}{% include cv-entry.html entry=entry %}{% endfor %}
 </div>
-<p class="cv-download"><a href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV as PDF</a></p>
+<div class="project-card__footer project-meta cv-download">
+  <span class="project-card__stack">Full CV with skills and languages</span>
+  <a class="project-card__link" href="{{ base_path }}/files/David_Kreismann_CV.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download PDF</a>
+</div>
