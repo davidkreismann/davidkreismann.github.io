@@ -101,7 +101,8 @@ for page in site.rglob('*.html'):
 
 # The two landing pages can paint without a separate render-blocking CSS request.
 # Other pages keep the cacheable shared stylesheet for subsequent navigation.
-main_css = (site / 'assets/css/main.css').read_text(encoding='utf-8')
+# Sass may prefix CSS with a UTF-8 BOM. Inside <style> it would invalidate :root.
+main_css = (site / 'assets/css/main.css').read_text(encoding='utf-8-sig')
 for relative in ['index.html', 'de/index.html']:
     homepage = site / relative
     if homepage.exists():
