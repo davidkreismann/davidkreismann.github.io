@@ -122,6 +122,12 @@ $role-gap    : 1em;
     color: var(--global-text-color-light);
   }
 
+  /* projects keep the short year to the right of the title */
+  .project-card .cv-entry__head {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
   .cv-role .cv-entry__sub {
     float: none;
     margin-left: 0;
@@ -234,6 +240,12 @@ $role-gap    : 1em;
       border: 1px solid var(--global-border-color);
       border-radius: 50%;
     }
+  }
+
+  /* photo and name block centered on the same line */
+  .sidebar .author__avatar,
+  .sidebar .author__content {
+    vertical-align: middle;
   }
 
   .sidebar .author__name {
