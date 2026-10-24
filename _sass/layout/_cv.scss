@@ -148,6 +148,11 @@ $role-gap    : 1em;
   margin-bottom: $entry-gap;
 }
 
+/* same gap below the year line as on the blog page */
+.archive__subtitle + .project-card {
+  margin-top: 0.625em; /* = the blog title's 0.5em at its larger font size */
+}
+
 .project-card__title {
   /* same size as the entry titles on the publications and blog pages */
   font-weight: bold;
