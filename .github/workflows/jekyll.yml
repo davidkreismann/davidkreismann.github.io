@@ -64,7 +64,7 @@ jobs:
           LC_ALL: C.UTF-8
         run: |
           gem install html-proofer --no-document
-          htmlproofer _site --disable-external --swap-urls '^https\://xdavld\.github\.io:' --allow-missing-href --ignore-empty-alt
+          htmlproofer _site --disable-external --swap-urls '^https\://davidkreismann\.github\.io:' --allow-missing-href --ignore-empty-alt
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5.0.0
 
