@@ -3,7 +3,7 @@ permalink: /
 title: "About me"
 author_profile: true
 og_title: "David Kreismann"
-description: "M.Sc. student in Robotics, Cognition, Intelligence at TUM and working student at IBM."
+description: "M.Sc. Student in Robotics, Cognition, Intelligence at TUM and Working Student at IBM."
 translation: /de/
 redirect_from: 
   - /about/

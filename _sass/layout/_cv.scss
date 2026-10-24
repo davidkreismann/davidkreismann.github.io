@@ -222,6 +222,26 @@ $role-gap    : 1em;
     padding-top: 0.5em;
   }
 
+  /* larger profile so it matches the size of the page text */
+  .author__avatar {
+    width: 72px;
+    padding-right: 14px;
+
+    img {
+      width: 72px;
+      max-width: 72px;
+    }
+  }
+
+  .sidebar .author__name {
+    font-size: 20px;
+  }
+
+  .sidebar .author__bio,
+  .sidebar .author__content p {
+    font-size: 15px;
+  }
+
   /* show the profile links as a row of icons instead of the "Follow" dropdown */
   .author__urls-wrapper {
     display: block;
@@ -255,7 +275,7 @@ $role-gap    : 1em;
     a {
       margin: 0;
       padding: 0.25em 0;
-      font-size: $type-size-6;
+      font-size: 15px;
     }
   }
 }
