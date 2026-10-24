@@ -27,6 +27,13 @@ $role-gap    : 1em;
   margin-bottom: $entry-gap;
 }
 
+/* long titles wrap on the left so the date stays at the right edge */
+.cv-entry__head > :first-child,
+.cv-entry__sub > :first-child {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .cv-entry__head,
 .cv-entry__sub {
   display: flex;
