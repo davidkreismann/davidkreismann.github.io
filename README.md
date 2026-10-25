@@ -24,8 +24,6 @@ Source of [davidkreismann.github.io](https://davidkreismann.github.io), built wi
 | Navigation styles and behavior | `_sass/layout/_navigation.scss`, `assets/js/greedy-navigation.js` |
 | Theme switching and other JavaScript | `assets/js/_main.js` |
 
-The web CV shows education, experience, awards and activities. Papers and patents have their own Publications page and remain included in the English PDF CV.
-
 ## English and German pages
 
 Translated pages use `lang: de` and a `translation:` URL pointing to their English counterpart. Add the reciprocal `translation:` URL to the English page as well. The language switch stays on the corresponding page; direct URLs determine the language without automatic redirects.
