@@ -6,7 +6,7 @@
 {% endif %}
 {% if project %}
 <div class="project-card__footer project-meta">
-  {% if project.github %}<a class="project-card__link" href="{{ project.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+  {% if project.github %}<a class="project-card__link" href="{{ project.github }}" data-umami-event="code-open" data-umami-event-url="{{ project.github | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
   <span class="project-card__stack">{{ project.stack_full | default: project.stack | join: ", " }}</span>
 </div>
 {% endif %}

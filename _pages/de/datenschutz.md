@@ -23,6 +23,8 @@ Um zu verstehen, wie diese Website genutzt wird, verwende ich [Umami](https://um
 
 Verarbeitet werden die aufgerufene Seite und ihre URL-Parameter (einschließlich Kampagnenkennzeichnungen), die verweisende Website, Browser und Betriebssystem, Gerät und Bildschirmgröße, Sprache sowie der ungefähre Standort. Die IP-Adresse wird zur Standortbestimmung und zur Berechnung einer gehashten Sitzungskennung verarbeitet; sie wird nicht als IP-Adressfeld in den Analysedatensätzen gespeichert. Die Kennung fasst Besuche ohne Cookies zusammen, garantiert aber keine vollständige Anonymität. Die Verarbeitung dient dazu, die Seitennutzung zu verstehen und die Website zu verbessern; Rechtsgrundlage für diese Besucherstatistik ist mein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO. Technische Einzelheiten beschreibt die [Umami-Dokumentation](https://docs.umami.is/docs/metric-definitions).
 
+Umami misst außerdem Ladegeschwindigkeit, Reaktionszeit und Layoutstabilität der Seiten (Core Web Vitals) und zählt Klicks auf das CV-PDF, Paper-Links und den Projektquellcode. Dabei werden die Ereignisart und die verlinkte öffentliche Ressource erfasst. Es werden keine Sitzungsaufzeichnungen, Heatmaps oder Formulareingaben erhoben.
+
 ## Cookies und lokaler Speicher
 
 Diese Website verwendet keine Cookies. Wenn du zwischen hellem und dunklem Modus wechselst, wird deine Auswahl im lokalen Speicher deines Browsers abgelegt, damit sie beim nächsten Besuch erhalten bleibt. Diese Daten verlassen dein Gerät nicht.

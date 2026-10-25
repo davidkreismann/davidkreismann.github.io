@@ -10,7 +10,7 @@ translation: /cv/
 
 {% include base_path %}
 
-<div class="wordwrap">Meinen Lebenslauf gibt es auch als <a href="{{ base_path }}/files/David_Kreismann_CV.pdf">PDF</a> (Englisch).</div>
+<div class="wordwrap">Meinen Lebenslauf gibt es auch als <a href="{{ base_path }}/files/David_Kreismann_CV.pdf" data-umami-event="cv-download">PDF</a> (Englisch).</div>
 
 
 <div class="cv-section">

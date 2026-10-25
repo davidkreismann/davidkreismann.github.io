@@ -51,13 +51,13 @@ layout: default
         {% include project-meta.html %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
+          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}" data-umami-event="paper-open" data-umami-event-url="{{ page.paperurl | escape }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a></p>
+          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}" data-umami-event="paper-open" data-umami-event-url="{{ page.paperurl | escape }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a></p>
         {% elsif page.citation and page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
+          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}" data-umami-event="paper-open" data-umami-event-url="{{ page.paperurl | escape }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}">{{ ui.paper_download | default: "Download Paper" }}</a></p>
+          <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.paperurl }}" data-umami-event="paper-open" data-umami-event-url="{{ page.paperurl | escape }}">{{ ui.paper_download | default: "Download Paper" }}</a></p>
         {% elsif page.citation and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.citation and page.slidesurl %}
@@ -65,7 +65,7 @@ layout: default
         {% elsif page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller"><a href="{{ page.slidesurl }}">{{ ui.slides_download | default: "Download Slides" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.paperurl }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
+          <p style="font-size: smaller"><a href="{{ page.paperurl }}" data-umami-event="paper-open" data-umami-event-url="{{ page.paperurl | escape }}">{{ ui.paper_download | default: "Download Paper" }}</a> | <a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.citation and page.bibtexurl %}
           <p style="font-size: smaller">{{ ui.citation_label | default: "Recommended citation:" }} {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">{{ ui.bibtex_download | default: "Download Bibtex" }}</a></p>
         {% elsif page.citation %}

@@ -22,6 +22,8 @@ To understand how this website is used, I use [Umami](https://umami.is), a priva
 
 It processes the visited page and its URL parameters (including campaign tags), the referring website, browser and operating system, device and screen size, language, and approximate location. The IP address is processed to derive the location and calculate a hashed session identifier; it is not stored as an IP-address field in the analytics records. This identifier groups visits without cookies, but does not guarantee complete anonymity. The purpose is to understand page usage and improve this website; the legal basis for these visitor statistics is my legitimate interest under Art. 6(1)(f) GDPR. Technical details are described in the [Umami documentation](https://docs.umami.is/docs/metric-definitions).
 
+Umami also measures page loading speed, responsiveness and layout stability (Core Web Vitals), and counts clicks on the CV PDF, paper links and project source code. For these clicks, the event type and the linked public resource are recorded. No session recordings, heatmaps or form entries are collected.
+
 ## Cookies and local storage
 
 This website does not use cookies. If you switch between light and dark mode, your choice is saved in your browser's local storage so that it is kept on your next visit. This data never leaves your device.

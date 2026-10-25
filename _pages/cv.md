@@ -11,7 +11,7 @@ redirect_from:
 
 {% include base_path %}
 
-<div class="wordwrap">You can also find my CV as a <a href="{{ base_path }}/files/David_Kreismann_CV.pdf">PDF</a>.</div>
+<div class="wordwrap">You can also find my CV as a <a href="{{ base_path }}/files/David_Kreismann_CV.pdf" data-umami-event="cv-download">PDF</a>.</div>
 
 
 <div class="cv-section">

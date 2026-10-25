@@ -12,7 +12,7 @@
   <p class="project-card__text">{{ card_excerpt | strip_html }}</p>
   <div class="project-card__footer">
     {% if include.project %}
-      {% if card.github %}<a class="project-card__link" href="{{ card.github }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+      {% if card.github %}<a class="project-card__link" href="{{ card.github }}" data-umami-event="code-open" data-umami-event-url="{{ card.github | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
       <span class="project-card__stack">{{ card.stack | join: ", " }}</span>
     {% else %}
       <time class="project-card__stack" datetime="{{ card.date | date_to_xmlschema }}">{% if page.lang == 'de' %}{{ card.date | date: "%d.%m.%Y" }}{% else %}{{ card.date | date: "%B %-d, %Y" }}{% endif %}</time>
