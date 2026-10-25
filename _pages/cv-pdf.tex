@@ -90,7 +90,7 @@ Layout based on Jake Gutierrez's resume template (MIT).
 \begin{center}
   \textbf{\Huge \scshape {% include latex.html text=site.author.name %}} \\ \vspace{1pt}
   \small \href{mailto:{{ site.author.email }}}{\underline{ {{- site.author.email -}} }} $|$
-  \href{ {{- site.url -}} }{\underline{ {{- site.url | remove: "https://" -}} }} $|$
+  \href{ {{- site.url -}}/?utm_source=cv&utm_medium=pdf&utm_campaign=cv}{\underline{ {{- site.url | remove: "https://" -}} }} $|$
   \href{https://linkedin.com/in/{{ site.author.linkedin }}}{\underline{linkedin.com/in/{{ site.author.linkedin }}}} $|$
   \href{https://github.com/{{ site.author.github }}}{\underline{github.com/{{ site.author.github }}}}
 \end{center}
