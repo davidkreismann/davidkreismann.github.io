@@ -331,7 +331,7 @@ $role-gap    : 1em;
   /* Fill the mobile content width without the template's table-cell padding. */
   .author-profile {
     display: grid;
-    grid-template-columns: 64px minmax(0, 1fr) auto;
+    grid-template-columns: clamp(64px, 12vw, 104px) minmax(0, 1fr) auto;
     align-items: center;
     column-gap: 10px;
     width: 100%;
@@ -361,14 +361,14 @@ $role-gap    : 1em;
   }
 
   .sidebar .author__name {
-    font-size: 20px;
+    font-size: clamp(20px, 3.2vw, 26px);
     line-height: 1.25;
     margin: 0 0 3px;
   }
 
   .sidebar .author__bio,
   .sidebar .author__content p {
-    font-size: 15px;
+    font-size: clamp(15px, 2.2vw, 18px);
     line-height: 1.45;
   }
 
@@ -427,6 +427,9 @@ $role-gap    : 1em;
     right: 0;
     width: 220px;
     max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 200px);
+    max-height: calc(100dvh - 200px);
+    overflow-y: auto;
     margin: 0;
     padding: 6px 8px;
     border: 1px solid var(--global-border-color);
@@ -459,6 +462,15 @@ $role-gap    : 1em;
   }
 
   .author__urls-wrapper.is-open .author__urls { display: block; }
+}
+
+/* Scale the contact control alongside the profile on wider touch screens. */
+@media (min-width: 600px) and (max-width: 924px) {
+  .author__links-toggle {
+    min-width: clamp(96px, 14vw, 120px);
+    min-height: clamp(36px, 5vw, 44px);
+    font-size: clamp(13px, 1.8vw, 16px);
+  }
 }
 
 /* Leave room for the localized contact button on narrow phones. */
