@@ -49,4 +49,4 @@ Jekyll generates the CV's LaTeX source, but does not compile its PDF. The PDF li
 
 Pushing to `master` runs `.github/workflows/jekyll.yml`. The workflow builds the production site, compiles the CV PDF, removes the generated LaTeX sources, subsets icon fonts and stylesheets, fingerprints assets and checks internal links before publishing to GitHub Pages.
 
-GoatCounter is configured in `_config.yml` and loaded through `_includes/analytics-providers/custom.html` only when `JEKYLL_ENV=production`. Local development does not send visitor statistics.
+Umami is configured in `_config.yml` and loaded through `_includes/analytics-providers/custom.html` in the document head only when `JEKYLL_ENV=production`. Tracking is restricted to `davidkreismann.github.io`; local development does not send visitor statistics.

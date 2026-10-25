@@ -18,7 +18,9 @@ This website is hosted on [GitHub Pages](https://pages.github.com), a service of
 
 ## Visitor statistics
 
-To see how often pages are visited, this website uses [GoatCounter](https://www.goatcounter.com). GoatCounter does not set cookies and does not track you across websites. It records the visited page, the referring website, browser and operating system, screen size and the country derived from your IP address. The IP address itself is not stored, and the statistics cannot be linked to you as a person. The legal basis is my legitimate interest in understanding how the website is used (Art. 6(1)(f) GDPR). Details are in the [GoatCounter privacy policy](https://www.goatcounter.com/help/privacy).
+To understand how this website is used, I use [Umami](https://umami.is), a privately operated analytics installation at `umami.tony-luke.de`, hosted in Germany. Umami does not set tracking cookies or track visitors across different websites.
+
+It processes the visited page and its URL parameters (including campaign tags), the referring website, browser and operating system, device and screen size, language, and approximate location. The IP address is processed to derive the location and calculate a hashed session identifier; it is not stored as an IP-address field in the analytics records. This identifier groups visits without cookies, but does not guarantee complete anonymity. The purpose is to understand page usage and improve this website; the legal basis for these visitor statistics is my legitimate interest under Art. 6(1)(f) GDPR. Technical details are described in the [Umami documentation](https://docs.umami.is/docs/metric-definitions).
 
 ## Cookies and local storage
 

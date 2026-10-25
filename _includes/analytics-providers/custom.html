@@ -1,5 +1,7 @@
 <!-- start custom analytics snippet -->
-{% if jekyll.environment == 'production' and site.analytics.goatcounter %}
-<script data-goatcounter="https://{{ site.analytics.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% if jekyll.environment == 'production' and site.analytics.umami.host and site.analytics.umami.website_id %}
+<script defer src="{{ site.analytics.umami.host | escape }}/script.js"
+        data-website-id="{{ site.analytics.umami.website_id | escape }}"
+        data-domains="{{ site.analytics.umami.domains | escape }}"></script>
 {% endif %}
 <!-- end custom analytics snippet -->

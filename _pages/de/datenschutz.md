@@ -19,7 +19,9 @@ Diese Website wird über [GitHub Pages](https://pages.github.com) bereitgestellt
 
 ## Besucherstatistik
 
-Um zu sehen, wie oft Seiten aufgerufen werden, nutzt diese Website [GoatCounter](https://www.goatcounter.com). GoatCounter setzt keine Cookies und verfolgt dich nicht über verschiedene Websites hinweg. Erfasst werden die aufgerufene Seite, die verweisende Website, Browser und Betriebssystem, Bildschirmgröße und das aus der IP-Adresse abgeleitete Land. Die IP-Adresse selbst wird nicht gespeichert, und die Statistik lässt sich dir nicht als Person zuordnen. Rechtsgrundlage ist mein berechtigtes Interesse daran, zu verstehen, wie die Website genutzt wird (Art. 6 Abs. 1 lit. f DSGVO). Details findest du in der [Datenschutzerklärung von GoatCounter](https://www.goatcounter.com/help/privacy).
+Um zu verstehen, wie diese Website genutzt wird, verwende ich [Umami](https://umami.is), eine privat betriebene Analyseinstallation unter `umami.tony-luke.de` mit Serverstandort Deutschland. Umami setzt keine Tracking-Cookies und verfolgt Besucher nicht über verschiedene Websites hinweg.
+
+Verarbeitet werden die aufgerufene Seite und ihre URL-Parameter (einschließlich Kampagnenkennzeichnungen), die verweisende Website, Browser und Betriebssystem, Gerät und Bildschirmgröße, Sprache sowie der ungefähre Standort. Die IP-Adresse wird zur Standortbestimmung und zur Berechnung einer gehashten Sitzungskennung verarbeitet; sie wird nicht als IP-Adressfeld in den Analysedatensätzen gespeichert. Die Kennung fasst Besuche ohne Cookies zusammen, garantiert aber keine vollständige Anonymität. Die Verarbeitung dient dazu, die Seitennutzung zu verstehen und die Website zu verbessern; Rechtsgrundlage für diese Besucherstatistik ist mein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO. Technische Einzelheiten beschreibt die [Umami-Dokumentation](https://docs.umami.is/docs/metric-definitions).
 
 ## Cookies und lokaler Speicher
 

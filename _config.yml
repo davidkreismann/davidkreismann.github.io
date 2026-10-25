@@ -172,7 +172,10 @@ social:
 # Analytics
 analytics:
   provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  goatcounter            : "davidkrmn" # cookie-free analytics, see _includes/analytics-providers/custom.html
+  umami:
+    host                 : "https://umami.tony-luke.de"
+    website_id           : "2e5cd50a-7d14-4d6a-9a17-160ed3e54def"
+    domains              : "davidkreismann.github.io"
   google:
     tracking_id          :
 
