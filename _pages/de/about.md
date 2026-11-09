@@ -3,7 +3,7 @@ permalink: /de/
 title: "Über mich"
 author_profile: true
 og_title: "David Kreismann"
-description: "Masterstudent in Robotics, Cognition, Intelligence an der TUM und Werkstudent bei IBM."
+description: "Ich studiere im Master Robotics, Cognition, Intelligence an der Technischen Universität München (TUM) und bin Werkstudent bei IBM."
 lang: de
 translation: /
 ---
@@ -23,7 +23,7 @@ Neuigkeiten
 ======
 * **Juni 2026** – Unser Paper *PTO: A Workload-driven Predictive Table Optimizer for Lakehouse Systems* wurde auf der **SIGMOD 2026** vorgestellt.
 * **Juni 2026** – **GenDev IT-Stipendium** von CHECK24 erhalten.
-* **Apr. 2026** – Start als Visiting Researcher im CV4DT Lab der University of Cambridge.
+* **Apr. 2026** – Start als Research Collaborator im CV4DT Lab der University of Cambridge.
 * **Dez. 2025** – Meine Abschlussarbeit hat den **ZfKI-Preis für die beste Bachelorarbeit im Bereich Künstliche Intelligenz** gewonnen.
 * **Dez. 2025** – Unsere Arbeit zu urbanen Hitzeinseln wurde auf dem **NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning** vorgestellt.
 * **Okt. 2025** – Start ins Masterstudium an der TUM und Aufnahme in die **Studienförderung der Stiftung der Deutschen Wirtschaft (sdw)**.

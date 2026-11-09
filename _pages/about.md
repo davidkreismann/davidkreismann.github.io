@@ -3,7 +3,7 @@ permalink: /
 title: "About me"
 author_profile: true
 og_title: "David Kreismann"
-description: "M.Sc. Student in Robotics, Cognition, Intelligence at TUM and Working Student at IBM."
+description: "I am a Master's student in Robotics, Cognition, Intelligence at the Technical University of Munich (TUM) and a working student at IBM."
 translation: /de/
 redirect_from: 
   - /about/
@@ -25,7 +25,7 @@ News
 ======
 * **Jun 2026** – Our paper *PTO: A Workload-driven Predictive Table Optimizer for Lakehouse Systems* was presented at **SIGMOD 2026**.
 * **Jun 2026** – Awarded the **GenDev IT Scholarship** by CHECK24.
-* **Apr 2026** – Started as visiting researcher at the CV4DT Lab, University of Cambridge.
+* **Apr 2026** – Started as research collaborator at the CV4DT Lab, University of Cambridge.
 * **Dec 2025** – My bachelor thesis received the **Best Bachelor Thesis Award in Artificial Intelligence** (ZfKI).
 * **Dec 2025** – Presented our work on urban heat islands at the **NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning**.
 * **Oct 2025** – Started my M.Sc. at TUM and received the scholarship of the **Foundation of German Business (sdw)**.

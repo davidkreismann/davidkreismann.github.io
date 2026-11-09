@@ -7,8 +7,9 @@ education:
     org: "Technical University of Munich"
     location: "Munich, Germany"
     date: "Oct. 2025 – Sept. 2027 (expected)"
+    pdf_date: "Oct. 2025 – Sept. 2027"
 
-  - title: "Bachelor of Science in Information Systems – Data Science"
+  - title: "Bachelor of Science in Information Systems - Data Science"
     org: "Baden-Wuerttemberg Cooperative State University"
     location: "Stuttgart, Germany"
     date: "Oct. 2022 – Sept. 2025"
@@ -16,8 +17,8 @@ education:
       - "Grade: 1.3 (German scale, 1.0–5.0; lower is better)"
       - "Thesis: <i>Detection and Simulation of Urban Heat Islands Using a Fine-Tuned Geospatial Foundation Model</i> (1.0)"
     pdf_details:
-      - "Grade: 1.3 (German scale, 1.0–5.0; lower is better), Valedictorian"
-      - "Thesis: <i>Detection and Simulation of Urban Heat Islands Using a Fine-Tuned Geospatial Foundation Model</i> (1.0)"
+      - "Grade: 1.3 (German scale, 1.0–5.0; lower is better)"
+      - "Thesis: Detection and Simulation of Urban Heat Islands Using a Fine-Tuned Geospatial Foundation Model (1.0)"
 
   - title: "Visiting Undergraduate Student"
     org: "University College Dublin"
@@ -26,7 +27,7 @@ education:
     details:
       - "GPA: 4.07 / 4.20 (First Class Honours)"
 
-  - title: "Abitur combined with dual vocational education"
+  - title: "General university entrance certificate (Abitur) combined with dual vocational education"
     org: "Professional Secondary School Centre for Electrical Engineering"
     location: "Dresden, Germany"
     date: "Aug. 2017 – July 2021"
@@ -37,61 +38,61 @@ education:
       - "Advanced courses: Mathematics and Computer Science"
 
 experience:
-  - title: "Visiting Researcher"
+  - title: "Research Collaborator"
     org: "CV4DT Lab, University of Cambridge"
     location: "Munich, Germany"
-    date: "Apr. 2026 – present"
+    date: "Apr. 2026 – Present"
     details:
-      - "Built a physics simulation and a reinforcement-learning control baseline for a vision-based digital twin of soft robotic grippers and am now developing AutoSoftGrasp to design object-specific soft grippers using generative AI."
+      - "Built a physics simulation and a reinforcement learning control baseline for a vision-based digital twin of soft robotic grippers and currently developing AutoSoftGrasp to design object-specific soft grippers using generative AI"
 
   - title: "Working Student"
     org: "IBM"
-    date: "Oct. 2025 – present"
+    date: "Oct. 2025 – Present"
     roles:
       - title: "Managing Director's Office, Mercedes-Benz & Daimler Truck Account"
         location: "Munich, Germany"
-        date: "July 2026 – present"
-        text: "Built an agentic workflow with IBM's agentic coding tool to map market trends to IBM products and business opportunities, using MCP servers, custom skills and agent modes"
+        date: "July 2026 – Present"
+        text: "Built an agentic workflow with IBM's agentic coding tool to support the Managing Director in mapping market trends to IBM products and business opportunities, using MCP servers, custom skills, and agent modes"
       - title: "Director's Office for Data & AI, Technology"
         location: "Munich, Germany"
         date: "Oct. 2025 – June 2026"
-        text: "Developed agentic AI use cases and evaluated where IBM's Data & AI portfolio could support strategic and technical initiatives"
+        text: "Developed agentic AI use cases and evaluated where IBM's Data & AI portfolio could be applied to support the Director across strategic and technical initiatives"
 
   - title: "Corporate Student"
     org: "IBM"
     date: "Sept. 2022 – Sept. 2025"
     roles:
-      - title: "AI Solutions Intern, Director's Office for Data & AI"
+      - title: "AI Solutions Intern, Director's Office for Data & AI - Technology"
         location: "Boeblingen, Germany"
         date: "July 2025 – Sept. 2025"
-        text: "Architected agentic AI use cases within the IBM Data & AI ecosystem"
-      - title: "Research Intern, IBM Research – Zurich"
+        text: "Architected agentic AI use cases within the IBM Data & AI ecosystem and evaluated its portfolio, supporting the Director across strategic and technical initiatives"
+      - title: "Research Intern, Zurich Research Laboratory"
         location: "Zurich, Switzerland"
         date: "Feb. 2025 – May 2025"
-        text: "Developed a novel approach to detect and simulate urban heat islands using a fine-tuned geospatial foundation model (accepted at the NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning)"
-      - title: "Research Intern, IBM Almaden Research Center"
+        text: "Developed a novel approach to detect and simulate urban heat islands using a fine-tuned geospatial foundation model, with results published at the NeurIPS 2025 Workshop: Tackling Climate Change with Machine Learning"
+      - title: "Research Intern, Almaden Research Center"
         location: "San José, USA"
         date: "June 2024 – Sept. 2024"
-        text: "Co-developed a workload-driven Predictive Table Optimizer for the IBM Lakehouse architecture that reduced query latency by up to 36% through automated parameter tuning (accepted at SIGMOD 2026)"
+        text: "Co-developed a workload-driven Predictive Table Optimizer for the IBM Lakehouse architecture that reduced query latency by up to 36% through automated parameter tuning, with results published at SIGMOD 2026"
       - title: "AI Engineer Intern, Technology Infrastructure"
         location: "Lausanne, Switzerland"
         date: "Nov. 2023 – Jan. 2024"
-        text: "Developed an unsupervised clustering approach to detect hardware anomalies in SFP modules from telemetry data"
+        text: "Developed an unsupervised clustering approach to detect hardware anomalies in SFP modules, to ensure early detection of critical hardware faults in telemetry data"
       - title: "AI Solutions Intern, Industry Lab"
         location: "Munich, Germany"
         date: "June 2023 – Sept. 2023"
-        text: "Analyzed feature importance in a traffic jam forecasting model to quantify the impact of weather and event patterns on travel delays"
+        text: "Analyzed feature importance in a traffic jam forecasting model to determine the impact of specific weather and event patterns on travel delays"
       - title: "Software Engineer Intern, Client Engineering"
         location: "Ehningen, Germany"
-        date: "Dec. 2022 – March 2023"
-        text: "Developed a secure single-page application (React/Next.js) with integrated single sign-on"
+        date: "Dec. 2022 – Mar. 2023"
+        text: "Developed a secure Single-Page Application (React/Next.js) with integrated Single Sign-On (SSO), to simplify the authentication workflow for internal client engineering teams"
 
   - title: "Research Intern"
-    org: "Karlsruhe Service Research Institute"
+    org: "Karlsruhe Service Research Institute at Karlsruhe Institute of Technology"
     location: "Karlsruhe, Germany"
     date: "Sept. 2024 – Nov. 2024"
     details:
-      - "Implemented multiple retrieval-augmented generation (RAG) strategies for a domain-specific chatbot to optimize context retrieval and response quality"
+      - "Implemented multiple Retrieval-Augmented Generation (RAG) strategies for a domain-specific chatbot, to optimize context retrieval and response quality"
 
   - title: "Infrastructure Engineer"
     org: "move:elevator GmbH"
@@ -110,10 +111,10 @@ awards:
     org: "ZfKI"
     date: "Dec. 2025"
     details:
-      - "First place for my bachelor thesis in artificial intelligence at the Faculty of Economics"
-  - title: "Scholarship of the Foundation of German Business"
+      - "Awarded first place by the ZfKI jury for my bachelor thesis in artificial intelligence at the Faculty of Economics"
+  - title: "Scholarship by Foundation of German Business (Stiftung der Deutschen Wirtschaft)"
     org: "Stiftung der Deutschen Wirtschaft (sdw e.V.)"
-    pdf_org: "sdw e.V."
+    pdf_org: "SDW e.V."
     date: "Oct. 2025"
     details:
       - "Merit-based scholarship for outstanding academic achievements and social engagement"
@@ -121,25 +122,25 @@ awards:
     org: "DAAD"
     date: "Dec. 2023"
     details:
-      - "Merit-based scholarship supporting my semester abroad"
+      - "Merit-based scholarship awarded to support students during their semester abroad"
 
 activities:
   - title: "MINGA Mentor"
     org: "TUM"
     location: "Munich, Germany"
-    date: "March 2026 – present"
+    date: "Mar. 2026 – Present"
     details:
-      - "Helping international students settle into university life with paperwork, city tours and group activities"
+      - "Helping international students to settle into their new university life by assisting them with important paperwork, showing them the city, and organising group activities"
 
 # Only in the PDF version of the CV
 pdf_sections:
   - title: "Technical Skills"
     lines:
-      - label: "Programming Languages & Developer Tools"
-        text: "Python, Java, SQL, TypeScript, R, Git, Docker"
-      - label: "Libraries"
-        text: "PyTorch, NumPy, Scikit-learn, React, Pandas, Matplotlib"
-  - title: "Hobbies and Languages"
+      - label: "Programming Languages & Tools"
+        text: "Python, Java, SQL, TypeScript, Git, Docker, ROS2"
+      - label: "Libraries & Frameworks"
+        text: "PyTorch, NumPy, Scikit-learn, ROS2, MCP, RAG"
+  - title: "Hobbies and languages"
     lines:
       - label: "Languages"
         text: "German (C2), English (C1), Russian (B2)"
